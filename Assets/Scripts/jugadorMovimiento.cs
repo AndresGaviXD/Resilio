@@ -9,6 +9,7 @@ public class jugadorMovimiento : MonoBehaviour
     public float JumpForce;
 
     private Rigidbody2D Rigidbody2D;
+    private Animator Animator;
     private float Horizontal;
     //Variable para confirmar si el jugador está tocando el suelo
     private bool Grounded;
@@ -18,12 +19,20 @@ public class jugadorMovimiento : MonoBehaviour
     {
         //Para enlazar el componetente de fisicas al movimiento del jugador
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        Animator = GetComponent<Animator>();
     }
 
     void Update()
     {
         //Para capturar el movimiento horizontal del personaje
         Horizontal = Input.GetAxisRaw("Horizontal");
+
+        //Girar al personaje al presionarse a o d
+        if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+        //Variable para animar movimiento horizontal
+        Animator.SetBool("Running", Horizontal != 0.0f);
 
         //Confirmar si el jugador está tocando el suelo.
         Debug.DrawRay(transform.position, Vector3.down * 0.1f, Color.red);
