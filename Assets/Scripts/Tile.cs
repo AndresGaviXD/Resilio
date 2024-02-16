@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
 [RequireComponent(typeof(SpriteRenderer))]
-
-
 public class Tile : MonoBehaviour
 {
     [Header("Tile Sprites")]
@@ -17,6 +17,7 @@ public class Tile : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private bool flagged = false;
+    public bool active = true;
 
 
     void Awake()
@@ -26,12 +27,38 @@ public class Tile : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (active)
         {
-            ClickedTile();
-        } else if (Input.GetMouseButtonDown(1))
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                ClickedTile();
+            }
+            else if (Input.GetMouseButtonDown(1))
+            {
+                flagged = !flagged;
+                if (flagged)
+                {
+                    spriteRenderer.sprite = flaggedTile;
+                }
+                else
+                {
+                    spriteRenderer.sprite = unclickedTile;
+                }
+            }
+        }
+    }
+
+
+    public void ClickedTile()
+    {
+        if (active & !flagged)
         {
-            flagged = !flagged;
+            active = false;
+            if (isMine)
+            {
+                spriteRenderer.sprite = mineHitTile;
+            }
         }
     }
 }
