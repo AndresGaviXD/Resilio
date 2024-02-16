@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Barco : MonoBehaviour
+public class Canon1 : MonoBehaviour
 {
     public int salud = 3;
+    void Start()
+    {
 
- 
+    }
+
     public void RecibirDaño()
     {
         salud--;
@@ -23,5 +26,10 @@ public class Barco : MonoBehaviour
     {
         Debug.Log("Barco destruido");
         Destroy(gameObject);
+    }
+
+    public void ColocarEnPosicion(Vector3 posicion)
+    {
+        transform.position = posicion;
     }
 }

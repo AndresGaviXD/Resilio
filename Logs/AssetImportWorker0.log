@@ -1,226 +1,155 @@
 Using pre-set license
 Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19045.3930; Version 2009; 64bit' Language: 'es' Physical Memory: 24501 MB
+OS: 'Windows 10 Pro; OS build 22631.3155; Version 2009; 64bit' Language: 'es' Physical Memory: 32679 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.2.2f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
+C:/Users/julia/OneDrive/Documentos/Proyecto de Grado/Resilio
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52855
-Successfully changed project path to: C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
-C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
+49826
+Successfully changed project path to: C:/Users/julia/OneDrive/Documentos/Proyecto de Grado/Resilio
+C:/Users/julia/OneDrive/Documentos/Proyecto de Grado/Resilio
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 48.00 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 77.39 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/andre/OneDrive/Documentos/GitHub/Resilio/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/julia/OneDrive/Documentos/Proyecto de Grado/Resilio/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 3GB (ID=0x1c02)
+    Renderer: Intel(R) Arc(TM) A750 Graphics (ID=0x56a1)
     Vendor:   
-    VRAM:     2978 MB
-    Driver:   31.0.15.3623
+    VRAM:     8096 MB
+    Driver:   31.0.101.5194
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56184
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56196
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.219697 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.165072 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 40.78 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 27.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.876 seconds
+- Completed reload, in  3.644 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.084372 seconds.
+Registered in 0.054843 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 42.73 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 27.95 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.534 seconds
+- Completed reload, in  2.972 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1843 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1846 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 87.2 MB.
 System memory in use after: 87.2 MB.
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2285.
-Total: 2.044500 ms (FindLiveObjects: 0.207500 ms CreateObjectMapping: 0.047700 ms MarkObjects: 1.653600 ms  DeleteObjects: 0.134600 ms)
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2288.
+Total: 1.761000 ms (FindLiveObjects: 0.224200 ms CreateObjectMapping: 0.046600 ms MarkObjects: 1.361600 ms  DeleteObjects: 0.127300 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/SpriteSheets/tablero2/8.png
-  artifactKey: Guid(1140dbc018fbb6a47ae667f594a9c9cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/8.png using Guid(1140dbc018fbb6a47ae667f594a9c9cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ba84207525e9b6d26831ce761c62173') in 0.157785 seconds
-  Import took 0.162878 seconds .
+  path: Assets/SpriteSheets/tablero1
+  artifactKey: Guid(ea4303500fc032744b42cf7f5d8052ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1 using Guid(ea4303500fc032744b42cf7f5d8052ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8c45ffab047245dee1d051b8b396d29') in 0.009188 seconds
+  Import took 0.011463 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000263 seconds.
-  path: Assets/SpriteSheets/tablero2/5.png
-  artifactKey: Guid(10301c5f2458c9b48b60de6cab24a8dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/5.png using Guid(10301c5f2458c9b48b60de6cab24a8dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78f64eceb97906fe031a349e2c8d4c17') in 0.012503 seconds
-  Import took 0.015349 seconds .
+  Time since last request: 1.842803 seconds.
+  path: Assets/SpriteSheets/tablero1/canon_first.png
+  artifactKey: Guid(9b297b190652242469ec5ea640b87921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1/canon_first.png using Guid(9b297b190652242469ec5ea640b87921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d2331708a937d692d1683ce015105a3') in 0.109760 seconds
+  Import took 0.112462 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/SpriteSheets/tablero2/Unclicked.png
-  artifactKey: Guid(9033e3b80763d3943806501e2dd1f2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/Unclicked.png using Guid(9033e3b80763d3943806501e2dd1f2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6d980bc4f239dd13f2bed9de21329d3') in 0.012237 seconds
-  Import took 0.015130 seconds .
+  Time since last request: 18705.479664 seconds.
+  path: Assets/Scripts/GridManager.cs
+  artifactKey: Guid(54f5183175753cf449a41e5c20a4c5c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GridManager.cs using Guid(54f5183175753cf449a41e5c20a4c5c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ea3f777dcd8e34f67e5683a61deafb1') in 0.017441 seconds
+  Import took 0.063759 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/SpriteSheets/tablero2/6.png
-  artifactKey: Guid(3b634029326cedf438cd45b0759c2eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/6.png using Guid(3b634029326cedf438cd45b0759c2eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79f3b9a9045e553faa48dfe53fbd85bd') in 0.013776 seconds
-  Import took 0.016754 seconds .
+  Time since last request: 0.879539 seconds.
+  path: Assets/Scripts/MenuInicial.cs
+  artifactKey: Guid(0ff7d72ee8f4be04abf23d7708ae483d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MenuInicial.cs using Guid(0ff7d72ee8f4be04abf23d7708ae483d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f67cbf9bd1067be4e4d27e21d36b9cd7') in 0.009160 seconds
+  Import took 0.012579 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/SpriteSheets/tablero2/2.png
-  artifactKey: Guid(c44ce8063cd31514eb8290550569867c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/2.png using Guid(c44ce8063cd31514eb8290550569867c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b7833de3ec5f847f114572d583ff097') in 0.012096 seconds
-  Import took 0.014920 seconds .
+  Time since last request: 0.440953 seconds.
+  path: Assets/Scripts/MenuOpciones.cs
+  artifactKey: Guid(450f61860ef28ad499362fa96e6849fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MenuOpciones.cs using Guid(450f61860ef28ad499362fa96e6849fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4040a1b672ad4de4c6966d00b78aa931') in 0.007286 seconds
+  Import took 0.009826 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000227 seconds.
-  path: Assets/SpriteSheets/tablero2/7.png
-  artifactKey: Guid(42c9a8c3cd6b50649aab08d405978218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/7.png using Guid(42c9a8c3cd6b50649aab08d405978218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29ec07fec129d2998096efa3711a709e') in 0.012315 seconds
-  Import took 0.015429 seconds .
+  Time since last request: 24.648357 seconds.
+  path: Assets/Scripts/primerCañonPrimerTablero.cs
+  artifactKey: Guid(ef87ac92d6384584b9d741488b6bc5a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/primerCañonPrimerTablero.cs using Guid(ef87ac92d6384584b9d741488b6bc5a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e235a72972d3ea736d601a5ec7f8f45c') in 0.006956 seconds
+  Import took 0.009909 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000240 seconds.
-  path: Assets/SpriteSheets/tablero2/Flag.png
-  artifactKey: Guid(9b3a284abb7e8844897f56b84d85c037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/Flag.png using Guid(9b3a284abb7e8844897f56b84d85c037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7ac0b3a118c7c0a8672610bfd816662') in 0.013067 seconds
-  Import took 0.015818 seconds .
+  Time since last request: 14.588904 seconds.
+  path: Assets/Scripts/primerCañonPrimerTablero.cs
+  artifactKey: Guid(ef87ac92d6384584b9d741488b6bc5a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/primerCañonPrimerTablero.cs using Guid(ef87ac92d6384584b9d741488b6bc5a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9894140db1a4cfb3472f18ae616a6f9') in 0.001889 seconds
+  Import took 0.004735 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/SpriteSheets/tablero2/Empty.png
-  artifactKey: Guid(89dbe763cd9df9240a743732f3baa077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/Empty.png using Guid(89dbe763cd9df9240a743732f3baa077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c8e805de3326676368b84c946ec0208') in 0.012878 seconds
-  Import took 0.015586 seconds .
+  Time since last request: 3481.181073 seconds.
+  path: Assets/Scripts/primerCañonPrimerTablero.cs
+  artifactKey: Guid(ef87ac92d6384584b9d741488b6bc5a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/primerCañonPrimerTablero.cs using Guid(ef87ac92d6384584b9d741488b6bc5a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38f01bb91c61c8b27643ae45d68f0555') in 0.001784 seconds
+  Import took 0.013893 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000266 seconds.
-  path: Assets/SpriteSheets/tablero2/RedMine.png
-  artifactKey: Guid(00411d0fca3e7b045964528814aa8d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/RedMine.png using Guid(00411d0fca3e7b045964528814aa8d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e95b2e2a66f04e7c1e66b1054e35c105') in 0.011892 seconds
-  Import took 0.014569 seconds .
+  Time since last request: 127.626993 seconds.
+  path: Assets/SpriteSheets/tablero1/canon_first.png
+  artifactKey: Guid(9b297b190652242469ec5ea640b87921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1/canon_first.png using Guid(9b297b190652242469ec5ea640b87921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afbed02ff0e2998bbbd416e38490b75e') in 0.041813 seconds
+  Import took 0.045145 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/SpriteSheets/tablero2/Mine.png
-  artifactKey: Guid(0702b3a95f819f141a4a6a79ddc8e25e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/Mine.png using Guid(0702b3a95f819f141a4a6a79ddc8e25e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '235f591aea098c7e230eb91b7f5d63d1') in 0.011710 seconds
-  Import took 0.014429 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/SpriteSheets/tablero2/4.png
-  artifactKey: Guid(5edaa9f0b14da2040ad36df161172c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/4.png using Guid(5edaa9f0b14da2040ad36df161172c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef594635ed7da501d81b83a929d0a346') in 0.011871 seconds
-  Import took 0.014572 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/SpriteSheets/tablero2/1.png
-  artifactKey: Guid(0bfa018683c1f6b438889b6ed369fe60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/1.png using Guid(0bfa018683c1f6b438889b6ed369fe60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dd4c955f25e83a6fa85680e5385b400') in 0.012415 seconds
-  Import took 0.015840 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/SpriteSheets/tablero2/3.png
-  artifactKey: Guid(e15922a1e0fe8774d8dc2be30dc8e363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/3.png using Guid(e15922a1e0fe8774d8dc2be30dc8e363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cc7c51c43a9a9c083af80110d7fd444') in 0.012155 seconds
-  Import took 0.014869 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000309 seconds.
-  path: Assets/SpriteSheets/tablero2/WrongMine.png
-  artifactKey: Guid(2ccf91c0bb5a60c4bb3a5b880bcd9bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpriteSheets/tablero2/WrongMine.png using Guid(2ccf91c0bb5a60c4bb3a5b880bcd9bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '917f6d2497ee20355068862fde89249d') in 0.011811 seconds
-  Import took 0.014796 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 281.466887 seconds.
-  path: Assets/Scripts/Tile.cs
-  artifactKey: Guid(f968512bee7e4bc4799429e4d4d91a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Tile.cs using Guid(f968512bee7e4bc4799429e4d4d91a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77b66bf53cfc71af40900285f0007a98') in 0.018462 seconds
-  Import took 0.022912 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001087 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.942 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1826 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 89.4 MB.
-System memory in use after: 89.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2295.
-Total: 2.284100 ms (FindLiveObjects: 0.234000 ms CreateObjectMapping: 0.049400 ms MarkObjects: 1.876400 ms  DeleteObjects: 0.122900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 4397.862767 seconds.
-  path: Assets/Scripts/Tile.cs
-  artifactKey: Guid(f968512bee7e4bc4799429e4d4d91a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Tile.cs using Guid(f968512bee7e4bc4799429e4d4d91a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbabe13fc434c8f9645745cbaafe1a54') in 0.013435 seconds
-  Import took 0.019762 seconds .
+  Time since last request: 46.710535 seconds.
+  path: Assets/SpriteSheets/tablero1/canon_first.png
+  artifactKey: Guid(9b297b190652242469ec5ea640b87921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1/canon_first.png using Guid(9b297b190652242469ec5ea640b87921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05a384fd79b2936a88ff272872280bf4') in 0.011307 seconds
+  Import took 0.014170 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
