@@ -18,6 +18,8 @@ public class Tile : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool flagged = false;
     public bool active = true;
+    public bool isMine = false;
+    public int mineCount = 0;
 
 
     void Awake()
@@ -58,6 +60,9 @@ public class Tile : MonoBehaviour
             if (isMine)
             {
                 spriteRenderer.sprite = mineHitTile;
+            } else
+            {
+                spriteRenderer.sprite = clickedTiles[mineCount];
             }
         }
     }
