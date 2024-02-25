@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
 
                 Tile tile = tileTransform.GetComponent<Tile>();
                 tiles.Add(tile);
+                tile.gameManager = this;
             }
         }
     }
@@ -118,5 +119,14 @@ public class GameManager : MonoBehaviour
 
 
         return neighbours;
+    }
+
+    public void ClickNeighbours(Tile tile)
+    {
+        int location = tiles.IndexOf(tile);
+        foreach (int pos in GetNeighbours(location))
+        {
+            tiles[pos].ClickedTile();
+        }
     }
 }
