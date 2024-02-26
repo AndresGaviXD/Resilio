@@ -129,4 +129,81 @@ public class GameManager : MonoBehaviour
             tiles[pos].ClickedTile();
         }
     }
+
+    public void GameOver()
+    {
+        foreach (Tile tile in tiles)
+        {
+            tile.ShowGameOverState();
+        }
+        Debug.Log("¡Has tocado una mina! Presiona R para reiniciar.");
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartGame();
+        }
+    }
+
+    public void RestartGame()
+    {
+        ClearBoard();
+        // Reinicia el juego recreando el tablero y reseteando el estado del juego
+        CreateGameBoard(width, height, numMines);
+        ResetGameState();
+    }
+
+    private void ClearBoard()
+    {
+        // Destruir todas las casillas existentes
+        foreach (Transform child in gameHolder)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // Limpiar la lista de casillas
+        tiles.Clear();
+    }
+
+    public void CheckGameOver()
+    {
+        int count = 0;
+        foreach (Tile tile in tiles)
+        {
+            if (tile.active)
+            {
+                count++;
+            }
+        }
+        if (count == numMines)
+        {
+            Debug.Log("Has desactivado todas las minas");
+            foreach (Tile tile in tiles)
+            {
+                tile.active = false;
+                tile.SetFlaggedIfMine();
+            }
+        }
+    }
+
+    public void ExpandIfFlagged (Tile tile)
+    {
+        int location = tiles.IndexOf(tile);
+        int flag_count = 0;
+        foreach (int pos in GetNeighbours(location))
+        {
+            if (tiles[pos].flagged)
+            {
+                flag_count++;
+            }
+        }
+
+        if (flag_count == tile.mineCount)
+        {
+            ClickNeighbours(tile);
+        }
+    }
+
 }
