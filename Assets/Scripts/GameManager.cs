@@ -13,8 +13,11 @@ public class GameManager : MonoBehaviour
     private int width;
     private int height;
     private int numMines;
+    
 
     private readonly float tileSize = 0.5f;
+
+    public GameObject restartPopup; 
 
     void Start()
     {
@@ -136,7 +139,7 @@ public class GameManager : MonoBehaviour
         {
             tile.ShowGameOverState();
         }
-        Debug.Log("¡Has tocado una mina! Presiona R para reiniciar.");
+        restartPopup.SetActive(true);
     }
 
     void Update()
@@ -153,6 +156,7 @@ public class GameManager : MonoBehaviour
         // Reinicia el juego recreando el tablero y reseteando el estado del juego
         CreateGameBoard(width, height, numMines);
         ResetGameState();
+        restartPopup.SetActive(false);
     }
 
     private void ClearBoard()
