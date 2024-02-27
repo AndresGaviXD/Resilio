@@ -1,77 +1,132 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+
 
 public class GridManager : MonoBehaviour
 {
-    public int largo = 10;
-    public int alto = 9;
-    public GameObject[,] cuadrilla;
-    public Sprite canonSprite;
+    private int canons = 2;
+    private Vector3 posicionElegida;
+    private bool estaCanonElegido = false;
+    private bool estaColocadoCorrectamente;
 
-    private int tamaño = 3; // Por ejemplo, barco de tamaño 3
+    [SerializeField] Canon1 canonElegido;
+    [SerializeField] PrimerTableroTile t;
+    [SerializeField] Button nextButton;
+    [SerializeField] Button textChangePosition;
+    [SerializeField] Collider2D dockCollider;
 
     void Start()
     {
-        IniciarCuadrilla();
+        canonElegido = null;
+        t = null;
+
+        dockCollider = GameObject.Find("Dock").GetComponent<Collider2D>();
+        nextButton = GameObject.Find("NextButton").GetComponent<Button>();
+        textChangePosition = GameObject.Find("ChangePosition").GetComponent<Button>();
+
+        nextButton.gameObject.SetActive(false);
+        textChangePosition.gameObject.SetActive(false);
     }
 
-    void Update()
+    private void Update()
     {
+        if (nextButton == null || textChangePosition == null)
+        {
+            nextButton = GameObject.Find("NextButton").GetComponent<Button>();
+            textChangePosition = GameObject.Find("ChangePosition").GetComponent<Button>();
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            ColocarCanonEnPosicion(mousePosition);
-        }
-    }
 
-    void IniciarCuadrilla()
-    {
-        cuadrilla = new GameObject[largo, alto];
-    }
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
-    void ColocarCanonEnPosicion(Vector2 posicion)
-    {
-        int x = Mathf.FloorToInt(posicion.x);
-        int y = Mathf.FloorToInt(posicion.y);
-
-        if (x >= 0 && x < largo && y >= 0 && y < alto)
-        {
-            if (VerificarEspacioDisponible(x, y))
+            if (!estaCanonElegido)
             {
-                ColocarCanon(new Vector3(x, y, 0f));
+                if (hit.collider != null)
+                {
+                    Canon1 canon = hit.collider.GetComponent<Canon1>();
+
+                    if (canon != null)
+                    {
+                        if (dockCollider.OverlapPoint(hit.point))
+                        {
+                            InitializeNewPosition(canon, hit);
+                        }
+
+                        else
+                        {
+                            UnityEngine.Debug.Log("You can't change position of your ship already!");
+                        }
+                    }
+                }
             }
-            else
+
+            if (estaCanonElegido)
             {
-                Debug.Log("No hay suficiente espacio para colocar el barco en esta posición.");
+                if (hit.collider != null && hit.collider.CompareTag("Cell"))
+                {
+
+                    //tile logic
+                    PrimerTableroTile tile = hit.collider.GetComponent<PrimerTableroTile>();
+                    t = tile;
+
+                    if (t.ReturnAvailability() == false)
+                    {
+                        posicionElegida = hit.transform.position;
+                        t.SetAvailability();
+                        canonElegido.MoveCanon(chosenPosition);
+
+                        //check if ship doesnt collide with other ships or is outside the border
+                        estaColocadoCorrectamente = canonElegido.ReturnPlacement();
+
+                        if (estaColocadoCorrectamente)
+                        {
+                            canons = canons - 1;
+                            estaCanonElegido = false;
+
+                        }
+                        else if (!estaColocadoCorrectamente)
+                        {
+                            t.ResetAvailability();
+                            posicionElegida = Vector3.zero;
+                        }
+
+                    }
+
+                    else if (t.ReturnAvailability() == true)
+                    {
+                        StartCoroutine(Wait());
+                    }
+
+                }
+
             }
         }
-    }
 
-    bool VerificarEspacioDisponible(int x, int y)
-    {
-        for (int i = 0; i < tamaño; i++)
+        //if every ship is on board start the battle
+        if (canons == 0)
         {
-            if (x + i >= largo || cuadrilla[x + i, y] != null)
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    void ColocarCanon(Vector3 posicion)
-    {
-        for (int i = 0; i < tamaño; i++)
-        {
-            GameObject nuevoCanon = new GameObject("CanonParte");
-            nuevoCanon.transform.position = new Vector3(posicion.x + i, posicion.y, 0f);
-
-            SpriteRenderer spriteRenderer = nuevoCanon.AddComponent<SpriteRenderer>();
-            spriteRenderer.sprite = canonSprite;
-            // Ajusta el tamaño del sprite según sea necesario.
-
-            cuadrilla[(int)posicion.x + i, (int)posicion.y] = nuevoCanon;
+            DisplayButtonNext();
         }
     }
+
+    public void DisplayButtonNext()
+    {
+        nextButton.gameObject.SetActive(true);
+    }
+
+
+    public IEnumerator Wait()
+    {
+        textChangePosition.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        textChangePosition.gameObject.SetActive(false);
+    }
+
 }
