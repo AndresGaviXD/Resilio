@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform tilePrefab;
     [SerializeField] private Transform gameHolder;
 
-    private List<Tile> tiles = new();
+    private List<Tile> tiles = new List<Tile>();
 
     private int width;
     private int height;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
 
                 Tile tile = tileTransform.GetComponent<Tile>();
                 tiles.Add(tile);
+                tile.gameManager = this;
             }
         }
     }
@@ -77,12 +79,131 @@ public class GameManager : MonoBehaviour
 
     private List<int> GetNeighbours(int pos)
     {
-        List<int> neighbours = new();
+        List<int> neighbours = new List<int>();
         int row = pos / width;
         int col = pos % width;
 
+        if (row < (height - 1))
+        { 
+
+            neighbours.Add(pos + width);
+            if (col > 0 )
+            { 
+             neighbours.Add(pos + width - 1);
+            }
+            if (col < (width - 1))
+            {
+                neighbours.Add(pos + width + 1);
+            }
+        }
+        if (col > 0)
+        {
+            neighbours.Add(pos - 1);
+        }
+        if (col < (width - 1))
+        {
+            neighbours.Add(pos + 1);
+        }
+        if (row > 0)
+        {
+            neighbours.Add(pos - width);
+            if (col > 0)
+            {
+                neighbours.Add(pos - width - 1);
+            }
+            if (col < (width - 1))
+            {
+                neighbours.Add(pos - width + 1);
+            }
+        }
 
 
         return neighbours;
     }
+
+    public void ClickNeighbours(Tile tile)
+    {
+        int location = tiles.IndexOf(tile);
+        foreach (int pos in GetNeighbours(location))
+        {
+            tiles[pos].ClickedTile();
+        }
+    }
+
+    public void GameOver()
+    {
+        foreach (Tile tile in tiles)
+        {
+            tile.ShowGameOverState();
+        }
+        Debug.Log("¡Has tocado una mina! Presiona R para reiniciar.");
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartGame();
+        }
+    }
+
+    public void RestartGame()
+    {
+        ClearBoard();
+        // Reinicia el juego recreando el tablero y reseteando el estado del juego
+        CreateGameBoard(width, height, numMines);
+        ResetGameState();
+    }
+
+    private void ClearBoard()
+    {
+        // Destruir todas las casillas existentes
+        foreach (Transform child in gameHolder)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // Limpiar la lista de casillas
+        tiles.Clear();
+    }
+
+    public void CheckGameOver()
+    {
+        int count = 0;
+        foreach (Tile tile in tiles)
+        {
+            if (tile.active)
+            {
+                count++;
+            }
+        }
+        if (count == numMines)
+        {
+            Debug.Log("Has desactivado todas las minas");
+            foreach (Tile tile in tiles)
+            {
+                tile.active = false;
+                tile.SetFlaggedIfMine();
+            }
+        }
+    }
+
+    public void ExpandIfFlagged (Tile tile)
+    {
+        int location = tiles.IndexOf(tile);
+        int flag_count = 0;
+        foreach (int pos in GetNeighbours(location))
+        {
+            if (tiles[pos].flagged)
+            {
+                flag_count++;
+            }
+        }
+
+        if (flag_count == tile.mineCount)
+        {
+            ClickNeighbours(tile);
+        }
+    }
+
 }
