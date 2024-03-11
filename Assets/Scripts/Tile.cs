@@ -51,7 +51,8 @@ public class Tile : MonoBehaviour
                     spriteRenderer.sprite = unclickedTile;
                 }
             }
-        } else
+        }
+        else
         {
             if (Input.GetMouseButton(0) && Input.GetMouseButtonDown(1))
             {
@@ -71,7 +72,8 @@ public class Tile : MonoBehaviour
             {
                 spriteRenderer.sprite = mineHitTile;
                 gameManager.GameOver();
-            } else
+            }
+            else
             {
                 spriteRenderer.sprite = clickedTiles[mineCount];
                 if (mineCount == 0)
@@ -88,11 +90,12 @@ public class Tile : MonoBehaviour
     {
         if (active)
         {
-            active= false;
+            active = false;
             if (isMine & !flagged)
             {
                 spriteRenderer.sprite = mineTile;
-            } else if (flagged & !isMine)
+            }
+            else if (flagged & !isMine)
             {
                 spriteRenderer.sprite = mineWrongTile;
             }

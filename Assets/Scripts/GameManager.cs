@@ -13,11 +13,11 @@ public class GameManager : MonoBehaviour
     private int width;
     private int height;
     private int numMines;
-    
+
 
     private readonly float tileSize = 0.5f;
 
-    public GameObject restartPopup; 
+    public GameObject restartPopup;
 
     void Start()
     {
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
     {
         int[] minePositions = Enumerable.Range(0, tiles.Count).OrderBy(x => Random.Range(0.0f, 1.0f)).ToArray();
 
-        for (int i=0; i < numMines; i++)
+        for (int i = 0; i < numMines; i++)
         {
             int pos = minePositions[i];
             tiles[pos].isMine = true;
@@ -87,12 +87,12 @@ public class GameManager : MonoBehaviour
         int col = pos % width;
 
         if (row < (height - 1))
-        { 
+        {
 
             neighbours.Add(pos + width);
-            if (col > 0 )
-            { 
-             neighbours.Add(pos + width - 1);
+            if (col > 0)
+            {
+                neighbours.Add(pos + width - 1);
             }
             if (col < (width - 1))
             {
@@ -192,7 +192,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ExpandIfFlagged (Tile tile)
+    public void ExpandIfFlagged(Tile tile)
     {
         int location = tiles.IndexOf(tile);
         int flag_count = 0;
