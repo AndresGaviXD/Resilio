@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/SegundoTablero.unity
+    guid: 6a5ed59ff97f94f4e90ce73cb4edd87a
+  - enabled: 1
+    path: Assets/Scenes/PrimerTablero.unity
+    guid: 38b8c102e855f43448a16aad1b674f22
   m_configObjects: {}
