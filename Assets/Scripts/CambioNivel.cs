@@ -9,7 +9,7 @@ public class CambioNivel : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Cambio")
+        if (other.gameObject.CompareTag("jugador")) // Modificado para comprobar si el jugador entra en contacto con la puerta
         {
             menuPanel.SetActive(true); // Activa el menú
                                        // Opcionalmente, pausa el juego si lo deseas
@@ -19,7 +19,7 @@ public class CambioNivel : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Cambio")
+        if (other.gameObject.CompareTag("jugador")) // Modificado para comprobar si el jugador sale del contacto con la puerta
         {
             menuPanel.SetActive(false); // Desactiva el menú si el jugador se aleja
                                         // Time.timeScale = 1; // Reanuda el juego si lo pausaste anteriormente
