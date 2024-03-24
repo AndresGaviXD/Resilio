@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cambio
+  - jugador
   layers:
   - Default
   - TransparentFX
