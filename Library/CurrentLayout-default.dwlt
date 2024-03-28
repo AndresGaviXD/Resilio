@@ -21,10 +21,13 @@ MonoBehaviour:
   m_ShowMode: 4
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
 =======
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
 =======
 >>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   m_Title: Scene
@@ -317,9 +320,12 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 109
 --- !u!114 &11
 =======
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
 =======
 >>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   controlID: 13816
@@ -581,9 +587,15 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: e4410000
       m_LastClickedID: 16868
       m_ExpandedIDs: 2cfaffff44fbffff60420000c6420000
+=======
+      m_SelectedIDs: cc700000
+      m_LastClickedID: 28876
+      m_ExpandedIDs: 5681ffff7281ffff6282ffff72d0ffff82d0ffffacd5fffff8f2ffff38f8ffff44fbffff3c40000046400000aa400000ce4000001a6f0000426f0000b6700000c4700000
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
 =======
       m_SelectedIDs: cc700000
       m_LastClickedID: 28876
@@ -655,9 +667,15 @@ MonoBehaviour:
   m_Position:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 524.549, y: 124.32708, z: -33.609238}
     speed: 2
     m_Value: {x: 501.69897, y: 123.84951, z: -32.50347}
+=======
+    m_Target: {x: 1.3306432, y: 0.43561667, z: -125.864204}
+    speed: 2
+    m_Value: {x: 1.3306432, y: 0.43561667, z: -125.864204}
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
 =======
     m_Target: {x: 1.3306432, y: 0.43561667, z: -125.864204}
     speed: 2
@@ -720,9 +738,15 @@ MonoBehaviour:
   m_Size:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 256.78317
     speed: 2
     m_Value: 245.72552
+=======
+    m_Target: 7.797197
+    speed: 2
+    m_Value: 7.797197
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
 =======
     m_Target: 7.797197
     speed: 2
