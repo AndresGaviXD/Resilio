@@ -5,35 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class CambioNivel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    [ContextMenu("cambiar nivel")]
-    public void CambiarNivel()
-    {
-        int nivelActual = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(nivelActual + 1);
-    }
-
+    public GameObject menuPanel;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Cambio")
+        if (other.gameObject.CompareTag("jugador")) // Modificado para comprobar si el jugador entra en contacto con la puerta
         {
-            Debug.Log("Entrando a la puerta");
-
-            int nivelActual = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(nivelActual + 1);
+            menuPanel.SetActive(true); // Activa el menú
+                                       // Opcionalmente, pausa el juego si lo deseas
+                                       // Time.timeScale = 0;
         }
     }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("jugador")) // Modificado para comprobar si el jugador sale del contacto con la puerta
+        {
+            menuPanel.SetActive(false); // Desactiva el menú si el jugador se aleja
+                                        // Time.timeScale = 1; // Reanuda el juego si lo pausaste anteriormente
+        }
+    }
 }
