@@ -1,5 +1,17 @@
 sceneSetups:
-- path: "Assets/Scenes/Colocaci\xF3nAstucia.unity"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+- path: Assets/Scenes/MenuInicial.unity
+=======
+- path: Assets/Scenes/SegundoTablero.unity
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+- path: Assets/Scenes/SegundoTablero.unity
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+- path: Assets/Scenes/SegundoTablero.unity
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   isLoaded: 1
   isActive: 1
   isSubScene: 0
