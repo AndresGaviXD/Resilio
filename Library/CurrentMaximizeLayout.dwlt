@@ -19,12 +19,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1600
     height: 759
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 130
+=======
+    width: 1360
+    height: 675
+  m_MinSize: {x: 677, y: 471}
+  m_MaxSize: {x: 14000, y: 14021}
+  vertical: 0
+  controlID: 13454
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,12 +142,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1095
     height: 759
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 110
+=======
+    width: 931
+    height: 675
+  m_MinSize: {x: 402, y: 471}
+  m_MaxSize: {x: 10000, y: 14021}
+  vertical: 1
+  controlID: 13455
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,12 +176,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1095
     height: 427
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 111
+=======
+    width: 931
+    height: 345
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
+  vertical: 0
+  controlID: 13429
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -181,10 +208,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 361
     height: 427
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+    width: 312
+    height: 345
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -220,7 +254,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: b0f6ffff3efbffff
+=======
+      m_ExpandedIDs: 5681ffff7281ffff6282ffff72d0ffff82d0ffffacd5fffff8f2ffff38f8ffff44fbffff3c40000046400000aa400000ce4000001a6f0000426f0000b6700000c4700000
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -309,9 +347,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -0.6086937, y: 0.05484067, z: 4072.4387}
     speed: 2
     m_Value: {x: -0.6086937, y: 0.05484067, z: 4072.4387}
+=======
+    m_Target: {x: 1.3306432, y: 0.43561667, z: -125.864204}
+    speed: 2
+    m_Value: {x: 1.3306432, y: 0.43561667, z: -125.864204}
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -362,9 +406,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 6.846333
     speed: 2
     m_Value: 6.846333
+=======
+    m_Target: 7.797197
+    speed: 2
+    m_Value: 7.797197
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -639,9 +689,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 427
     width: 1095
     height: 332
+=======
+    y: 345
+    width: 931
+    height: 330
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 12}
@@ -701,9 +757,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 80420000
     m_LastClickedID: 17024
     m_ExpandedIDs: 000000007442000000ca9a3b
+=======
+    m_SelectedIDs: 3c420000
+    m_LastClickedID: 16956
+    m_ExpandedIDs: 000000003442000000ca9a3b
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -731,7 +793,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000074420000
+=======
+    m_ExpandedIDs: 000000003442000000ca9a3b
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -756,10 +822,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 28440000
     m_LastClickedInstanceID: 17448
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000b8520000be4100007e4000005a420000c6410000764100007a410000decbffff864300001845000000000000
+=======
+    m_SelectedInstanceIDs: cc700000
+    m_LastClickedInstanceID: 28876
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000b8520000be4100007e4000005a420000c6410000764100007a410000decbffff864300001845000000000000d44f00005e4a0000ce410000
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -869,7 +942,11 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
+<<<<<<< HEAD
   m_LastInspectedObjectInstanceID: 17448
+=======
+  m_LastInspectedObjectInstanceID: 28876
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:
