@@ -15,11 +15,19 @@ C:/Users/julia/OneDrive/Documentos/Proyecto de Grado/Resilio
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< HEAD
 50786
 Successfully changed project path to: C:/Users/julia/OneDrive/Documentos/Proyecto de Grado/Resilio
 C:/Users/julia/OneDrive/Documentos/Proyecto de Grado/Resilio
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 28.83 ms, found 1 plugins.
+=======
+62481
+Successfully changed project path to: C:/Users/julia/OneDrive/Documentos/Proyecto de Grado/Resilio
+C:/Users/julia/OneDrive/Documentos/Proyecto de Grado/Resilio
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 33.66 ms, found 1 plugins.
+>>>>>>> parent of 818642f4 (no sé como arreglar el cambio de nivel)
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
@@ -41,25 +49,41 @@ Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Registered in 0.001035 seconds.
 Native extension for WindowsStandalone target not found
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 28.08 ms, found 1 plugins.
+=======
+Refreshing native plugins compatible for Editor in 29.15 ms, found 1 plugins.
+>>>>>>> parent of 818642f4 (no sé como arreglar el cambio de nivel)
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 - Completed reload, in  0.717 seconds
+=======
+- Completed reload, in  0.774 seconds
+>>>>>>> parent of 818642f4 (no sé como arreglar el cambio de nivel)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
 Registered in 0.000700 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 28.40 ms, found 1 plugins.
+=======
+Refreshing native plugins compatible for Editor in 30.16 ms, found 1 plugins.
+>>>>>>> parent of 818642f4 (no sé como arreglar el cambio de nivel)
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 - Completed reload, in  0.614 seconds
+=======
+- Completed reload, in  0.645 seconds
+>>>>>>> parent of 818642f4 (no sé como arreglar el cambio de nivel)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -75,6 +99,7 @@ Total: 1.931100 ms (FindLiveObjects: 0.181600 ms CreateObjectMapping: 0.059400 m
 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
   path: Assets/SpriteSheets/background/jungle_paralax_bg2.png
   artifactKey: Guid(92dd54641b561ac49a000f5bcca98e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/SpriteSheets/background/jungle_paralax_bg2.png using Guid(92dd54641b561ac49a000f5bcca98e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64c35800a9c5cf10005791eccac44e6d') in 0.119178 seconds
@@ -87,6 +112,35 @@ Received Import Request.
   artifactKey: Guid(618d25c052121054a8f51383d6d4b62c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/SpriteSheets/background/background_color.png using Guid(618d25c052121054a8f51383d6d4b62c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '459d88fefc052f034be09db9266350ff') in 0.012334 seconds
   Import took 0.014816 seconds .
+=======
+  path: Assets/Scenes/PrimerTablero.unity
+  artifactKey: Guid(38b8c102e855f43448a16aad1b674f22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/PrimerTablero.unity using Guid(38b8c102e855f43448a16aad1b674f22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '299f313706290d5c654cbca8ab827a8e') in 0.013773 seconds
+  Import took 0.016894 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000787 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.669 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1832 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.5 MB.
+System memory in use after: 86.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2295.
+Total: 2.364900 ms (FindLiveObjects: 0.248400 ms CreateObjectMapping: 0.129300 ms MarkObjects: 1.783900 ms  DeleteObjects: 0.202200 ms)
+>>>>>>> parent of 818642f4 (no sé como arreglar el cambio de nivel)
 
 ========================================================================
 Received Import Request.
@@ -98,6 +152,7 @@ Start importing Assets/SpriteSheets/background/clouds2.png using Guid(84aaabed5e
 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
   Time since last request: 0.000183 seconds.
   path: Assets/SpriteSheets/background/jungle_tree2_bg.png
   artifactKey: Guid(b949929fd7117734f9f36bb29b54fd94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -151,5 +206,12 @@ Received Import Request.
   artifactKey: Guid(b4c642e5456846c47bef94355d222533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/SpriteSheets/background/jungle_tree2.png using Guid(b4c642e5456846c47bef94355d222533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fa581853a3bc0ab1751800bb5eb3f28') in 0.019218 seconds
   Import took 0.021473 seconds .
+=======
+  Time since last request: 10.971176 seconds.
+  path: Assets/Scenes/MenuInicial.unity
+  artifactKey: Guid(2db6d1be40180ce42b2c78c6a019d285) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MenuInicial.unity using Guid(2db6d1be40180ce42b2c78c6a019d285) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e8a1e87958ed0e8d5e58cb8bbc86c19') in 0.018106 seconds
+  Import took 0.021111 seconds .
+>>>>>>> parent of 818642f4 (no sé como arreglar el cambio de nivel)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
