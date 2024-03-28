@@ -19,7 +19,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-<<<<<<< Updated upstream
+<<<<<<< HEAD
     width: 1600
     height: 759
   m_MinSize: {x: 679, y: 492}
@@ -29,11 +29,17 @@ MonoBehaviour:
 =======
     width: 1360
     height: 675
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 677, y: 471}
+  m_MaxSize: {x: 14000, y: 14021}
   vertical: 0
-  controlID: 2415
->>>>>>> Stashed changes
+  controlID: 13454
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +148,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< Updated upstream
+<<<<<<< HEAD
     width: 1095
     height: 759
   m_MinSize: {x: 403, y: 492}
@@ -152,11 +158,17 @@ MonoBehaviour:
 =======
     width: 931
     height: 675
-  m_MinSize: {x: 402, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 402, y: 471}
+  m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 2416
->>>>>>> Stashed changes
+  controlID: 13455
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,7 +188,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< Updated upstream
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     width: 1095
     height: 427
   m_MinSize: {x: 403, y: 221}
@@ -189,8 +203,24 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 2391
->>>>>>> Stashed changes
+  controlID: 13429
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+    width: 931
+    height: 345
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
+  vertical: 0
+  controlID: 13429
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+    width: 931
+    height: 345
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
+  vertical: 0
+  controlID: 13429
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -208,17 +238,29 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< Updated upstream
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     width: 361
     height: 427
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
 =======
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
     width: 312
     height: 345
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
->>>>>>> Stashed changes
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -251,14 +293,22 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 33}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-<<<<<<< Updated upstream
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       m_ExpandedIDs: b0f6ffff3efbffff
 =======
-      m_ExpandedIDs: 44fbffff3c40000046400000aa400000c0400000d2400000
->>>>>>> Stashed changes
+      m_ExpandedIDs: 5681ffff7281ffff6282ffff72d0ffff82d0ffffacd5fffff8f2ffff38f8ffff44fbffff3c40000046400000aa400000ce4000001a6f0000426f0000b6700000c4700000
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+      m_ExpandedIDs: 5681ffff7281ffff6282ffff72d0ffff82d0ffffacd5fffff8f2ffff38f8ffff44fbffff3c40000046400000aa400000ce4000001a6f0000426f0000b6700000c4700000
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+      m_ExpandedIDs: 5681ffff7281ffff6282ffff72d0ffff82d0ffffacd5fffff8f2ffff38f8ffff44fbffff3c40000046400000aa400000ce4000001a6f0000426f0000b6700000c4700000
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -347,15 +397,27 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< Updated upstream
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.6086937, y: 0.05484067, z: 4072.4387}
     speed: 2
     m_Value: {x: -0.6086937, y: 0.05484067, z: 4072.4387}
 =======
-    m_Target: {x: 0.79747295, y: -0.082623675, z: -246.33017}
+    m_Target: {x: 1.3306432, y: 0.43561667, z: -125.864204}
     speed: 2
-    m_Value: {x: 0.79747295, y: -0.082623675, z: -246.33017}
->>>>>>> Stashed changes
+    m_Value: {x: 1.3306432, y: 0.43561667, z: -125.864204}
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+    m_Target: {x: 1.3306432, y: 0.43561667, z: -125.864204}
+    speed: 2
+    m_Value: {x: 1.3306432, y: 0.43561667, z: -125.864204}
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+    m_Target: {x: 1.3306432, y: 0.43561667, z: -125.864204}
+    speed: 2
+    m_Value: {x: 1.3306432, y: 0.43561667, z: -125.864204}
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -406,15 +468,27 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< Updated upstream
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 6.846333
     speed: 2
     m_Value: 6.846333
 =======
-    m_Target: 1.3511893
+    m_Target: 7.797197
     speed: 2
-    m_Value: 1.3511893
->>>>>>> Stashed changes
+    m_Value: 7.797197
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+    m_Target: 7.797197
+    speed: 2
+    m_Value: 7.797197
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+    m_Target: 7.797197
+    speed: 2
+    m_Value: 7.797197
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -689,7 +763,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< Updated upstream
+<<<<<<< HEAD
     y: 427
     width: 1095
     height: 332
@@ -697,7 +771,13 @@ MonoBehaviour:
     y: 345
     width: 931
     height: 330
->>>>>>> Stashed changes
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 12}
@@ -757,15 +837,27 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< Updated upstream
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 80420000
     m_LastClickedID: 17024
     m_ExpandedIDs: 000000007442000000ca9a3b
 =======
-    m_SelectedIDs: a8420000
-    m_LastClickedID: 17064
-    m_ExpandedIDs: 000000009842000000ca9a3b
->>>>>>> Stashed changes
+    m_SelectedIDs: 3c420000
+    m_LastClickedID: 16956
+    m_ExpandedIDs: 000000003442000000ca9a3b
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+    m_SelectedIDs: 3c420000
+    m_LastClickedID: 16956
+    m_ExpandedIDs: 000000003442000000ca9a3b
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+    m_SelectedIDs: 3c420000
+    m_LastClickedID: 16956
+    m_ExpandedIDs: 000000003442000000ca9a3b
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -793,11 +885,19 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< Updated upstream
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000074420000
 =======
-    m_ExpandedIDs: 000000009842000000ca9a3b
->>>>>>> Stashed changes
+    m_ExpandedIDs: 000000003442000000ca9a3b
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+    m_ExpandedIDs: 000000003442000000ca9a3b
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+    m_ExpandedIDs: 000000003442000000ca9a3b
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -822,17 +922,23 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-<<<<<<< Updated upstream
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 28440000
     m_LastClickedInstanceID: 17448
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000b8520000be4100007e4000005a420000c6410000764100007a410000decbffff864300001845000000000000
 =======
-    m_SelectedInstanceIDs: ae400000
-    m_LastClickedInstanceID: 16558
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+    m_SelectedInstanceIDs: cc700000
+    m_LastClickedInstanceID: 28876
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000b8520000be4100007e4000005a420000c6410000764100007a410000decbffff864300001845000000000000d44f00005e4a0000ce410000
->>>>>>> Stashed changes
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -942,13 +1048,20 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-<<<<<<< Updated upstream
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   m_LastInspectedObjectInstanceID: 17448
-  m_LastVerticalScrollValue: 0
 =======
-  m_LastInspectedObjectInstanceID: 16558
-  m_LastVerticalScrollValue: 169
->>>>>>> Stashed changes
+  m_LastInspectedObjectInstanceID: 28876
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+  m_LastInspectedObjectInstanceID: 28876
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+=======
+  m_LastInspectedObjectInstanceID: 28876
+>>>>>>> parent of 5d62ea69 (me falta arreglar algo y ya paso al siguiente nivel)
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
