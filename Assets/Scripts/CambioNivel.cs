@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class CambioNivel : MonoBehaviour
 {
     public GameObject menuPanel;
-    public int nivelACargar; // Variable para almacenar el nivel a cargar
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,11 +25,4 @@ public class CambioNivel : MonoBehaviour
                                         // Time.timeScale = 1; // Reanuda el juego si lo pausaste anteriormente
         }
     }
-
-    // Este método será llamado desde el botón "Entrar" en tu menú flotante
-    public void CargarNivelEspecifico()
-    {
-        SceneManager.LoadScene(nivelACargar); // Carga el nivel especificado
-    }
-
 }
