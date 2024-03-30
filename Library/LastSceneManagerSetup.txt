@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/TercerTablero.unity
+- path: "Assets/Scenes/Colocaci\xF3nAstucia.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0
