@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7656256857037782635}
   m_Layer: 0
   m_Name: Cell
-  m_TagString: Untagged
+  m_TagString: Cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26a8179cb741034ea688a59b767adcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ships: []
+  ships:
+  - {fileID: 6330156400401485055, guid: 122c3b4e46e089e4e9424bf26e5a87e8, type: 3}
+  - {fileID: 3824700902705383271, guid: feb680f7c848b944ca2a41bf35069621, type: 3}
   hasShip: 0
 --- !u!114 &7656256857037782635
 MonoBehaviour:

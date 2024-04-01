@@ -10,9 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8467079259580856274}
   - component: {fileID: 8163996605547072834}
-  m_Layer: 0
+  - component: {fileID: -5602697989678563118}
+  - component: {fileID: -3857661594909434770}
+  - component: {fileID: 6087776877543082728}
+  m_Layer: 3
   m_Name: TwoCellShip
-  m_TagString: Untagged
+  m_TagString: 2cell_ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3824700902705383271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7814867, y: 0.6041659, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: 71706ed5498c23c4db26d5bd3d22fa7d, type: 3}
+  m_Sprite: {fileID: 7802316636552013781, guid: dd77b39b3ed51144c915752f09e2dae7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,3 +85,59 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &-5602697989678563118
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3824700902705383271}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.08139646, y: 0.007302642}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.2, y: 0.94}
+    newSize: {x: 1.04, y: 2.33}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.24459, y: 1.437445}
+  m_EdgeRadius: 0
+--- !u!114 &-3857661594909434770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3824700902705383271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a0b7f6acc859040855f234cdb666e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ships: []
+  xOffset: 0.52
+  xOffsetRotated: 0
+  yOffset: 0.52
+  gameManager: {fileID: 0}
+  selectedCell: {fileID: 0}
+--- !u!114 &6087776877543082728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3824700902705383271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f4f5208075c3748b6c03cf38a94224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

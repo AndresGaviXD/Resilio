@@ -6,11 +6,14 @@ TagManager:
   tags:
   - Cambio
   - jugador
+  - 1cell_ship
+  - 2cell_ship
+  - Cell
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ship
   - Water
   - UI
   - 
