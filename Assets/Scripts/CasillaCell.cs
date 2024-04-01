@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CasillaCell : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  public Vector2Int coordenadas { get; set; }
+  public Casilla casilla { get; set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  public bool empty => casilla == null;
+  public bool ocupado => casilla != null;
 }
+
+
+
