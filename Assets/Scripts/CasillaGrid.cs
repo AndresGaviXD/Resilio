@@ -3,9 +3,9 @@ using UnityEngine;
 public class CasillaGrid : MonoBehaviour
 {
     public CasillaRow[] rows { get; private set; }
-    public CasillaCell cells { get; private set; }
+    public CasillaCell[] cells { get; private set; }
 
-    public int size => cells.Lenght;
+    public int size => cells.Length;
     public int height => rows.Length;
     public int width => size/height;
 
