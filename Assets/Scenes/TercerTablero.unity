@@ -999,6 +999,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casillaPrefab: {fileID: 7957891077238459831, guid: 6c3b325403010fe42a04476d8f545de2, type: 3}
+  casillaEstados:
+  - {fileID: 11400000, guid: 3d2f951ae150f9248a94d6cbf19b7304, type: 2}
+  - {fileID: 11400000, guid: 9be20807b3b9a3145b31e42169a639e5, type: 2}
+  - {fileID: 11400000, guid: 0ca7db2fee59d134c8787a25633e39ef, type: 2}
+  - {fileID: 11400000, guid: 979d13d2f15bfbc4296040627d0866f2, type: 2}
+  - {fileID: 11400000, guid: 66a1177316fb6eb438721b4e1cecfb79, type: 2}
+  - {fileID: 11400000, guid: fb9aa83e06be4c042a2afaad0e2a58e7, type: 2}
+  - {fileID: 11400000, guid: d5434a935c90cce46b041e3c6db53cb5, type: 2}
+  - {fileID: 11400000, guid: 0cec27db9bd28fb4e9a96798db7d6d9e, type: 2}
+  - {fileID: 11400000, guid: 52d13a7223660224981a899a97114362, type: 2}
+  - {fileID: 11400000, guid: 4c55bed0378a52d438b5a9f20848ec59, type: 2}
+  - {fileID: 11400000, guid: d25880c79b304fb40a538a2352aa8691, type: 2}
 --- !u!1 &1061277444
 GameObject:
   m_ObjectHideFlags: 0

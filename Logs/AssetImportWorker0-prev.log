@@ -1,0 +1,649 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19045.4170; Version 2009; 64bit' Language: 'es' Physical Memory: 24501 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52374
+Successfully changed project path to: C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
+C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 46.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/andre/OneDrive/Documentos/GitHub/Resilio/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 3GB (ID=0x1c02)
+    Vendor:   
+    VRAM:     2978 MB
+    Driver:   31.0.15.3623
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002128 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 44.86 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.085 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001233 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 51.84 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.059 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1862 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.0 MB.
+System memory in use after: 87.9 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2306.
+Total: 2.483200 ms (FindLiveObjects: 0.230300 ms CreateObjectMapping: 0.050600 ms MarkObjects: 2.047700 ms  DeleteObjects: 0.153500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/CasillaTablero.cs
+  artifactKey: Guid(5a58f00fc3cf88345adca599b59a6095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CasillaTablero.cs using Guid(5a58f00fc3cf88345adca599b59a6095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a2c074259c723c98eee4ed0f1d06aca') in 0.052780 seconds
+  Import took 0.056225 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001339 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.928 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2309.
+Total: 2.094000 ms (FindLiveObjects: 0.209100 ms CreateObjectMapping: 0.048400 ms MarkObjects: 1.720100 ms  DeleteObjects: 0.115100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 215.853716 seconds.
+  path: Assets/SpriteSheets/tablero1/Prefabs Astucia/OneCellShip.prefab
+  artifactKey: Guid(122c3b4e46e089e4e9424bf26e5a87e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1/Prefabs Astucia/OneCellShip.prefab using Guid(122c3b4e46e089e4e9424bf26e5a87e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2911ad8d35969cf60bce5d1c0a618c28') in 0.107173 seconds
+  Import took 0.110338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Scripts/CasillaTablero.cs
+  artifactKey: Guid(5a58f00fc3cf88345adca599b59a6095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CasillaTablero.cs using Guid(5a58f00fc3cf88345adca599b59a6095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d608ec0ad6bc196e686ba8c4af7a739') in 0.006769 seconds
+  Import took 0.009515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/SpriteSheets/tablero1/Prefabs Astucia/TwoCellShip.prefab
+  artifactKey: Guid(feb680f7c848b944ca2a41bf35069621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1/Prefabs Astucia/TwoCellShip.prefab using Guid(feb680f7c848b944ca2a41bf35069621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11ab7012858b7c7f89138963db06c2a0') in 0.024860 seconds
+  Import took 0.027621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/SpriteSheets/tablero1/Prefabs Astucia/Cell.prefab
+  artifactKey: Guid(0b0ecc8c44d56bc49b7be58944c666ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1/Prefabs Astucia/Cell.prefab using Guid(0b0ecc8c44d56bc49b7be58944c666ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8b24147a1ab9b1eabb003fc1a0c68e7') in 0.025810 seconds
+  Import took 0.029781 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001117 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.933 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.4 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2319.
+Total: 2.476400 ms (FindLiveObjects: 0.286600 ms CreateObjectMapping: 0.063000 ms MarkObjects: 2.002800 ms  DeleteObjects: 0.122700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001255 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.886 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.7 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2322.
+Total: 2.129100 ms (FindLiveObjects: 0.209500 ms CreateObjectMapping: 0.049600 ms MarkObjects: 1.748400 ms  DeleteObjects: 0.120600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001102 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.963 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.9 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2325.
+Total: 2.062100 ms (FindLiveObjects: 0.216500 ms CreateObjectMapping: 0.048400 ms MarkObjects: 1.676300 ms  DeleteObjects: 0.119900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 318.446297 seconds.
+  path: Assets/SpriteSheets/tablero1/casilla2.png
+  artifactKey: Guid(dd77b39b3ed51144c915752f09e2dae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1/casilla2.png using Guid(dd77b39b3ed51144c915752f09e2dae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b675e4d7ccf4d503c697d96b64e672f5') in 0.107183 seconds
+  Import took 0.110961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/SpriteSheets/tablero1/escenarioV2.png
+  artifactKey: Guid(03b81846fe48fdb4fb36032436809347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1/escenarioV2.png using Guid(03b81846fe48fdb4fb36032436809347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58893810aa139f6366a9849e60c4fa6b') in 0.026809 seconds
+  Import took 0.029696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/SpriteSheets/tablero1/pleb.png
+  artifactKey: Guid(71706ed5498c23c4db26d5bd3d22fa7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1/pleb.png using Guid(71706ed5498c23c4db26d5bd3d22fa7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b401fb54226cc9b551dc1bf21920c60') in 0.022414 seconds
+  Import took 0.025367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/SpriteSheets/tablero1/nig2.png
+  artifactKey: Guid(b8781c006f66f844a964e89dbf480fc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1/nig2.png using Guid(b8781c006f66f844a964e89dbf480fc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89154008b6fd68ef1d3e34db03d61d73') in 0.014454 seconds
+  Import took 0.017187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.283807 seconds.
+  path: Assets/SpriteSheets/tablero1/Prefabs Astucia
+  artifactKey: Guid(2c0f605642f14824b9698f5a3607ec53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero1/Prefabs Astucia using Guid(2c0f605642f14824b9698f5a3607ec53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e017b99d26728ec89092cbcaff05ffb') in 0.008255 seconds
+  Import took 0.011458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 339.455863 seconds.
+  path: Assets/SpriteSheets/background/background_cave.png
+  artifactKey: Guid(07e060f2dabba86439752a74b30ad9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/background_cave.png using Guid(07e060f2dabba86439752a74b30ad9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4c0e494f4c7d27060b8a02ec14f8b6b') in 0.021725 seconds
+  Import took 0.025212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/SpriteSheets/background/jungle_paralax_bg2.png
+  artifactKey: Guid(92dd54641b561ac49a000f5bcca98e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/jungle_paralax_bg2.png using Guid(92dd54641b561ac49a000f5bcca98e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64c35800a9c5cf10005791eccac44e6d') in 0.021427 seconds
+  Import took 0.024531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/SpriteSheets/background/tile_cave_blob_1.png
+  artifactKey: Guid(6ff53ff63c3247e4ea4eee5a61320914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/tile_cave_blob_1.png using Guid(6ff53ff63c3247e4ea4eee5a61320914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5f4cf153c1cf28e6fc4b43d45a51be0') in 0.021658 seconds
+  Import took 0.024558 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/SpriteSheets/background/background_color.png
+  artifactKey: Guid(618d25c052121054a8f51383d6d4b62c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/background_color.png using Guid(618d25c052121054a8f51383d6d4b62c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '459d88fefc052f034be09db9266350ff') in 0.015726 seconds
+  Import took 0.018950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/SpriteSheets/background/clouds2.png
+  artifactKey: Guid(84aaabed5effe764ba731ba5545a2d3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/clouds2.png using Guid(84aaabed5effe764ba731ba5545a2d3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cae1a728bed527d61ae209898b94e9d') in 0.022470 seconds
+  Import took 0.025315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/SpriteSheets/background/background_color.png
+  artifactKey: Guid(618d25c052121054a8f51383d6d4b62c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/background_color.png using Guid(618d25c052121054a8f51383d6d4b62c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '459d88fefc052f034be09db9266350ff') in 0.014623 seconds
+  Import took 0.017854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/SpriteSheets/background/jungle_tree2_bg.png
+  artifactKey: Guid(b949929fd7117734f9f36bb29b54fd94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/jungle_tree2_bg.png using Guid(b949929fd7117734f9f36bb29b54fd94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a1b8d36cd2196252837544098166603') in 0.027949 seconds
+  Import took 0.032475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/SpriteSheets/background/jungle_tree1_bg.png
+  artifactKey: Guid(d21cc39d51e9db9419a30095f5b91eaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/jungle_tree1_bg.png using Guid(d21cc39d51e9db9419a30095f5b91eaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '290f09aa019558321a8ecb78efed216b') in 0.020690 seconds
+  Import took 0.023864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/SpriteSheets/background/background_cave.png
+  artifactKey: Guid(07e060f2dabba86439752a74b30ad9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/background_cave.png using Guid(07e060f2dabba86439752a74b30ad9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4c0e494f4c7d27060b8a02ec14f8b6b') in 0.012598 seconds
+  Import took 0.015682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/SpriteSheets/background/jungle_paralax_bg1.png
+  artifactKey: Guid(d16937d69aacb554287f5f6f8b566f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/jungle_paralax_bg1.png using Guid(d16937d69aacb554287f5f6f8b566f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a78cf402c9e6fe2ecccf8c79863613d') in 0.022090 seconds
+  Import took 0.025145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/SpriteSheets/background/clouds1.png
+  artifactKey: Guid(d358bad8d6d9bc74880addef546b004d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/clouds1.png using Guid(d358bad8d6d9bc74880addef546b004d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfe461e0fbd973bfcff5932532ce0ce8') in 0.022012 seconds
+  Import took 0.025036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/SpriteSheets/background/jungle_tree1.png
+  artifactKey: Guid(d54e36ff381ff8f4bbde130d30c03aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/jungle_tree1.png using Guid(d54e36ff381ff8f4bbde130d30c03aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15b4bc67c303b538f1738596d62fbdc7') in 0.022689 seconds
+  Import took 0.025745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/SpriteSheets/background/jungle_tree2.png
+  artifactKey: Guid(b4c642e5456846c47bef94355d222533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/jungle_tree2.png using Guid(b4c642e5456846c47bef94355d222533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fa581853a3bc0ab1751800bb5eb3f28') in 0.021866 seconds
+  Import took 0.024752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/SpriteSheets/background/tile_cave_hole_1.png
+  artifactKey: Guid(f021ea53bf72b8b4bb7787555ec0d86f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/background/tile_cave_hole_1.png using Guid(f021ea53bf72b8b4bb7787555ec0d86f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '548903acba905cd545117406261142d7') in 0.020212 seconds
+  Import took 0.023135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 185.131383 seconds.
+  path: Assets/SpriteSheets/tablero3/Tile.png
+  artifactKey: Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3/Tile.png using Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aa2e98a95ce2053261d110a0eeb9b22') in 0.016071 seconds
+  Import took 0.019773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.473409 seconds.
+  path: Assets/SpriteSheets/tablero3/Casilla.png
+  artifactKey: Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3/Casilla.png using Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ccca795a7ccaedcdc71e8b0683e6ba6') in 0.014841 seconds
+  Import took 0.017983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002581 seconds.
+  path: Assets/SpriteSheets/tablero3/Casilla.png
+  artifactKey: Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3/Casilla.png using Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ccca795a7ccaedcdc71e8b0683e6ba6') in 0.010378 seconds
+  Import took 0.013202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 81.744652 seconds.
+  path: Assets/SpriteSheets/tablero3/Casilla.png
+  artifactKey: Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3/Casilla.png using Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3927eb3468e056e83eb5d458a8b204f') in 0.016125 seconds
+  Import took 0.019405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002248 seconds.
+  path: Assets/SpriteSheets/tablero3/Casilla.png
+  artifactKey: Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3/Casilla.png using Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3927eb3468e056e83eb5d458a8b204f') in 0.010622 seconds
+  Import took 0.013754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 153.859169 seconds.
+  path: Assets/SpriteSheets/tablero3/Casilla.png
+  artifactKey: Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3/Casilla.png using Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '366a94f8462902c0f3edbf8f31cfb007') in 0.010332 seconds
+  Import took 0.013735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003758 seconds.
+  path: Assets/SpriteSheets/tablero3/Casilla.png
+  artifactKey: Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3/Casilla.png using Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '366a94f8462902c0f3edbf8f31cfb007') in 0.008376 seconds
+  Import took 0.011356 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 512.262146 seconds.
+  path: Assets/SpriteSheets/tablero3_prefab/Casilla.prefab
+  artifactKey: Guid(6c3b325403010fe42a04476d8f545de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3_prefab/Casilla.prefab using Guid(6c3b325403010fe42a04476d8f545de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '430a66be451383d35bb3595e88fc0a24') in 0.067095 seconds
+  Import took 0.070916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002420 seconds.
+  path: Assets/SpriteSheets/tablero3_prefab/Casilla.prefab
+  artifactKey: Guid(6c3b325403010fe42a04476d8f545de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3_prefab/Casilla.prefab using Guid(6c3b325403010fe42a04476d8f545de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '430a66be451383d35bb3595e88fc0a24') in 0.021293 seconds
+  Import took 0.024379 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001113 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.928 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2354.
+Total: 2.062500 ms (FindLiveObjects: 0.264400 ms CreateObjectMapping: 0.060100 ms MarkObjects: 1.623600 ms  DeleteObjects: 0.113400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 300.259980 seconds.
+  path: Assets/SpriteSheets/tablero3_prefab/Casilla.prefab
+  artifactKey: Guid(6c3b325403010fe42a04476d8f545de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3_prefab/Casilla.prefab using Guid(6c3b325403010fe42a04476d8f545de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a9bb95c4c560c1a4caec98f3778e1f4') in 0.079150 seconds
+  Import took 0.082686 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001139 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.959 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.4 MB.
+System memory in use after: 91.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2357.
+Total: 2.073700 ms (FindLiveObjects: 0.215400 ms CreateObjectMapping: 0.049200 ms MarkObjects: 1.691100 ms  DeleteObjects: 0.117200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001096 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.954 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.6 MB.
+System memory in use after: 91.6 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2360.
+Total: 2.262000 ms (FindLiveObjects: 0.245800 ms CreateObjectMapping: 0.067900 ms MarkObjects: 1.817000 ms  DeleteObjects: 0.129900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001113 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.913 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.8 MB.
+System memory in use after: 91.8 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2363.
+Total: 2.120500 ms (FindLiveObjects: 0.237700 ms CreateObjectMapping: 0.049800 ms MarkObjects: 1.709700 ms  DeleteObjects: 0.121800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2527.171098 seconds.
+  path: Assets/Scripts/Casilla.cs
+  artifactKey: Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Casilla.cs using Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c81d2a35c1426d41f75e866097d12c9d') in 0.006107 seconds
+  Import took 0.009602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.597501 seconds.
+  path: Assets/Scripts/Casilla.cs
+  artifactKey: Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Casilla.cs using Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93fca041e23a251a2da26830c4817fa5') in 0.003216 seconds
+  Import took 0.006356 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 79.328176 seconds.
+  path: Assets/Scripts/Casilla.cs
+  artifactKey: Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Casilla.cs using Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9514f9194af5bba1390fdb877fbc42b') in 0.002789 seconds
+  Import took 0.006082 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.286296 seconds.
+  path: Assets/Scripts/Casilla.cs
+  artifactKey: Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Casilla.cs using Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c07b0eb2bd8f4d721a503e6ef11265c0') in 0.002754 seconds
+  Import took 0.005901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 156.135818 seconds.
+  path: Assets/Scripts/Casilla.cs
+  artifactKey: Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Casilla.cs using Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f672c387c52da45b0c810172748d48d4') in 0.003095 seconds
+  Import took 0.006844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 176.145286 seconds.
+  path: Assets/Scripts/Casilla.cs
+  artifactKey: Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Casilla.cs using Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5daf26b138140cdb7602b7c3307b78c') in 0.004905 seconds
+  Import took 0.009445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 134.964245 seconds.
+  path: Assets/Scripts/Casilla.cs
+  artifactKey: Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Casilla.cs using Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06c294e915a11f0562206323ae098be8') in 0.011512 seconds
+  Import took 0.016360 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001586 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.880 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.2 MB.
+System memory in use after: 92.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2366.
+Total: 2.570000 ms (FindLiveObjects: 0.396900 ms CreateObjectMapping: 0.075700 ms MarkObjects: 1.961200 ms  DeleteObjects: 0.134900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.400906 seconds.
+  path: Assets/Scripts/Casilla.cs
+  artifactKey: Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Casilla.cs using Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '534a781598cde0586c3082bb7b2caaae') in 0.005469 seconds
+  Import took 0.008555 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.416970 seconds.
+  path: Assets/Scripts/Casilla.cs
+  artifactKey: Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Casilla.cs using Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d9979c1b34b89c9bdb2eb6f03bfcd66') in 0.002747 seconds
+  Import took 0.006089 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001154 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.922 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.3 MB.
+System memory in use after: 92.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2369.
+Total: 2.639200 ms (FindLiveObjects: 0.258200 ms CreateObjectMapping: 0.071100 ms MarkObjects: 2.159500 ms  DeleteObjects: 0.148800 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
