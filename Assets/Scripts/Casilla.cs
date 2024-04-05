@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -50,6 +51,23 @@ public class Casilla : MonoBehaviour
         this.cell = cell;
         this.cell.casilla = this;
 
-        transform.position = cell.transform.position;
+        StartCoroutine(Animate(cell.transform.position));
+    }
+
+    private IEnumerator Animate(Vector3 to)
+    {
+        float elapsed = 0f;
+        float duracion = 0.1f;
+
+        Vector3 from = transform.position;
+
+        while (elapsed < duracion)
+        {
+            transform.position = Vector3.Lerp(from, to, elapsed / duracion);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = to;
     }
 }

@@ -1,4 +1,4 @@
-using System.Collections    ;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -77,7 +77,7 @@ public class CasillaTablero : MonoBehaviour
         {
             if (adjacent.ocupado)
             {
-                //TODO: merging
+                // TODO: merging
                 break;
             }
 
@@ -85,8 +85,7 @@ public class CasillaTablero : MonoBehaviour
             adjacent = grid.GetAdjacentCell(adjacent, direccion);
         }
 
-        if (newCell != null)
-        {
+        if (newCell != null){
             casilla.MoveTo(newCell);
         }
     }
