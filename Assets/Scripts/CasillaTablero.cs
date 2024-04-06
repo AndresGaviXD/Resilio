@@ -9,7 +9,7 @@ public class CasillaTablero : MonoBehaviour
 
     private CasillaGrid grid;
     private List<Casilla> casillas;
-
+    private bool waiting;
 
     private void Awake()
     {
@@ -36,23 +36,31 @@ public class CasillaTablero : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (!waiting)
         {
-            MoveCasillas(Vector2Int.up, 0, 1, 1, 1);
-        } else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            MoveCasillas(Vector2Int.down, 0, 1, grid.height - 2, -1);
-        } else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            MoveCasillas(Vector2Int.left, 1, 1, 0, 1);
-        } else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            MoveCasillas(Vector2Int.right, grid.width -2, -1, 0, 1);
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                MoveCasillas(Vector2Int.up, 0, 1, 1, 1);
+            }
+            else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                MoveCasillas(Vector2Int.left, 1, 1, 0, 1);
+            }
+            else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                MoveCasillas(Vector2Int.down, 0, 1, grid.height - 2, -1);
+            }
+            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                MoveCasillas(Vector2Int.right, grid.width - 2, -1, 0, 1);
+            }
         }
+        
     }
 
     private void MoveCasillas(Vector2Int direccion, int startX, int incrementX, int startY, int incrementY)
     {
+        bool changed = false;
         for (int x = startX; x >= 0 && x < grid.width; x += incrementX)
         {
             for (int  y = startY; y >= 0 && y < grid.height; y += incrementY)
@@ -61,13 +69,18 @@ public class CasillaTablero : MonoBehaviour
 
                 if (cell.ocupado)
                 {
-                    MoveCasilla(cell.casilla, direccion);
+                    changed |= MoveCasilla(cell.casilla, direccion);
                 }
             }
         }
+
+        if (changed)
+        {
+            StartCoroutine(WaitForChanges());
+        }
     }
 
-    private void MoveCasilla(Casilla casilla, Vector2Int direccion)
+    private bool MoveCasilla(Casilla casilla, Vector2Int direccion)
     {
         CasillaCell newCell = null;
         CasillaCell adjacent = grid.GetAdjacentCell(casilla.cell, direccion);
@@ -85,8 +98,22 @@ public class CasillaTablero : MonoBehaviour
             adjacent = grid.GetAdjacentCell(adjacent, direccion);
         }
 
-        if (newCell != null){
+        if (newCell != null)
+        {
             casilla.MoveTo(newCell);
+            return true;
         }
+
+        return false;
+    }
+
+    private IEnumerator WaitForChanges()
+    {
+        waiting = true;
+        yield return new WaitForSeconds(0.1f);
+        waiting = false;
+
+        //TODO: Crear nueva casilla
+        //TODO: GAME OVER
     }
 }
