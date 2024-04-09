@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CasillaTablero : MonoBehaviour
 {
+    public veinteGameManager gameManager;
     public Casilla casillaPrefab;
     public CasillaEstado[] casillaEstados;
 
@@ -17,13 +18,25 @@ public class CasillaTablero : MonoBehaviour
         casillas = new List<Casilla>(16);
     }
 
-    private void Start()
+    public void ClearTablero()
     {
-        CreateCasilla();
-        CreateCasilla();
+
+        foreach (var cell in grid.cells)
+        {
+            cell.casilla = null;
+        }
+
+        foreach (var casilla in casillas) 
+        { 
+            Destroy(casilla.gameObject);
+
+        }
+
+        casillas.Clear();
+
     }
 
-    private void CreateCasilla()
+    public void CreateCasilla()
     {
         Casilla casilla = Instantiate(casillaPrefab, grid.transform);
 
@@ -40,7 +53,7 @@ public class CasillaTablero : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
-                MoveCasillas(Vector2Int.up, 0, 1, 1, 1);
+                MoveCasillas(Vector2Int.up, 0, 1, 1, -1);
             }
             else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
@@ -48,7 +61,7 @@ public class CasillaTablero : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
-                MoveCasillas(Vector2Int.down, 0, 1, grid.height - 2, -1);
+                MoveCasillas(Vector2Int.down, 0, 1, grid.height - 1, -1);
             }
             else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
@@ -113,7 +126,7 @@ public class CasillaTablero : MonoBehaviour
 
     private bool CanMerge(Casilla a, Casilla b)
     {
-        return a.number == b.number;
+        return a.number == b.number && !b.locked;
     }
 
     private void Merge(Casilla a, Casilla b)
@@ -146,6 +159,11 @@ public class CasillaTablero : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         waiting = false;
 
+        foreach (var casilla in casillas)
+        {
+            casilla.locked = false;
+        }
+
 
         if (casillas.Count != grid.size)
         {
@@ -153,7 +171,47 @@ public class CasillaTablero : MonoBehaviour
         }
 
 
-        //TODO: Crear nueva casilla
-        //TODO: GAME OVER
+        if (CheckJuegoFinalizado())
+        {
+            gameManager.GameOver();
+        }
+    }
+
+    private bool CheckJuegoFinalizado()
+    {
+        if (casillas.Count != grid.size)
+        {
+            return false;
+        }
+
+        foreach (var casilla in casillas)
+        {
+            CasillaCell up = grid.GetAdjacentCell(casilla.cell, Vector2Int.up);
+            CasillaCell down = grid.GetAdjacentCell(casilla.cell, Vector2Int.down);
+            CasillaCell left = grid.GetAdjacentCell(casilla.cell, Vector2Int.left);
+            CasillaCell right = grid.GetAdjacentCell(casilla.cell, Vector2Int.right);
+
+            if (up != null && CanMerge(casilla, up.casilla))
+            {
+                return false;
+            }
+            if (down != null && CanMerge(casilla, down.casilla))
+            {
+                return false;
+            }
+            if (left != null && CanMerge(casilla, left.casilla))
+            {
+                return false;
+            }
+
+            if (right != null && CanMerge(casilla, right.casilla))
+            {
+                return false;
+            }
+
+
+        }
+
+        return true;
     }
 }

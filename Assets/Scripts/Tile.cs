@@ -15,7 +15,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private Sprite mineHitTile;
 
     [Header("GM set via code")]
-    public GameManager gameManager;
+    public BuscaGameManager gameManager;
 
 
     private SpriteRenderer spriteRenderer;

@@ -8,6 +8,7 @@ public class Casilla : MonoBehaviour
     public CasillaEstado state { get; private set; }
     public CasillaCell cell { get; private set; }
     public int number { get; private set; }
+    public bool locked { get;  set; }
 
     private Image fondo;
     private TextMeshProUGUI text;
@@ -62,6 +63,8 @@ public class Casilla : MonoBehaviour
         }
 
         this.cell = null;
+        cell.casilla.locked = true;
+
 
         StartCoroutine(Animate(cell.transform.position, true));
 
