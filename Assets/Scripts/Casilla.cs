@@ -7,7 +7,7 @@ public class Casilla : MonoBehaviour
 {
     public CasillaEstado state { get; private set; }
     public CasillaCell cell { get; private set; }
-    public string number { get; private set; }
+    public int number { get; private set; }
 
     private Image fondo;
     private TextMeshProUGUI text;
@@ -18,14 +18,14 @@ public class Casilla : MonoBehaviour
         text = GetComponentInChildren<TextMeshProUGUI>();
     }
 
-    public void SetEstado(CasillaEstado state, string number)
+    public void SetEstado(CasillaEstado state, int number)
     {
         this.state = state;
         this.number = number;
 
         fondo.color = state.backgroundColor;
         text.color = state.textColor;
-        text.text = number;
+        text.text = number.ToString();
     }
 
     public void Spawn(CasillaCell cell)
@@ -51,10 +51,23 @@ public class Casilla : MonoBehaviour
         this.cell = cell;
         this.cell.casilla = this;
 
-        StartCoroutine(Animate(cell.transform.position));
+        StartCoroutine(Animate(cell.transform.position, false));
     }
 
-    private IEnumerator Animate(Vector3 to)
+    public void Merge(CasillaCell cell)
+    {
+        if (this.cell != null)
+        {
+            this.cell.casilla = null;
+        }
+
+        this.cell = null;
+
+        StartCoroutine(Animate(cell.transform.position, true));
+
+    }
+
+    private IEnumerator Animate(Vector3 to, bool merging)
     {
         float elapsed = 0f;
         float duracion = 0.1f;
@@ -69,5 +82,10 @@ public class Casilla : MonoBehaviour
         }
 
         transform.position = to;
+
+        if (merging)
+        {
+            Destroy(gameObject);
+        }
     }
 }

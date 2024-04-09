@@ -27,7 +27,7 @@ public class CasillaTablero : MonoBehaviour
     {
         Casilla casilla = Instantiate(casillaPrefab, grid.transform);
 
-        casilla.SetEstado(casillaEstados[0], "-");
+        casilla.SetEstado(casillaEstados[0], 2);
 
         casilla.Spawn(grid.GetRandomEmptyCell());
 
@@ -90,7 +90,11 @@ public class CasillaTablero : MonoBehaviour
         {
             if (adjacent.ocupado)
             {
-                // TODO: merging
+                if (CanMerge(casilla, adjacent.casilla))
+                {
+                    Merge(casilla, adjacent.casilla);
+                    return true;
+                }
                 break;
             }
 
@@ -107,11 +111,47 @@ public class CasillaTablero : MonoBehaviour
         return false;
     }
 
+    private bool CanMerge(Casilla a, Casilla b)
+    {
+        return a.number == b.number;
+    }
+
+    private void Merge(Casilla a, Casilla b)
+    {
+        casillas.Remove(a);
+        a.Merge(b.cell);
+
+        int index = Mathf.Clamp(IndexOf(b.state) + 1, 0, casillaEstados.Length - 1);
+        int number = b.number * 2;
+
+        b.SetEstado(casillaEstados[index], number);
+    }
+
+    private int IndexOf(CasillaEstado state)
+    {
+        for (int i = 0; i < casillaEstados.Length; i++)
+        {
+            if (state == casillaEstados[i])
+            {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
     private IEnumerator WaitForChanges()
     {
         waiting = true;
         yield return new WaitForSeconds(0.1f);
         waiting = false;
+
+
+        if (casillas.Count != grid.size)
+        {
+            CreateCasilla();
+        }
+
 
         //TODO: Crear nueva casilla
         //TODO: GAME OVER
