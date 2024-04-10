@@ -28,12 +28,12 @@ public class ShipScript : MonoBehaviour
     [SerializeField] float xOffset;
     [SerializeField] float xOffsetRotated;
     [SerializeField] float yOffset;
-    [SerializeField] GameManager1 gameManager;
+    [SerializeField] AstuciaGameManager gameManager;
     [SerializeField] CellScript selectedCell;
 
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager1>();
+        gameManager = GameObject.Find("GameManager").GetComponent<AstuciaGameManager>();
     }
 
     public void ChangeColor(GameObject obj, ShipType type)

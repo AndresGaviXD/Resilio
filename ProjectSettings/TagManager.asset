@@ -9,6 +9,14 @@ TagManager:
   - 1cell_ship
   - 2cell_ship
   - Cell
+  - 4cells_ship
+  - 2cells_ship
+  - Bird
+  - EnemyCell
+  - Ship
+  - 3cells_ship
+  - Start
+  - DontDestroy
   layers:
   - Default
   - TransparentFX
