@@ -28,7 +28,7 @@ public class ShipScript : MonoBehaviour
     [SerializeField] float xOffset;
     [SerializeField] float xOffsetRotated;
     [SerializeField] float yOffset;
-    [SerializeField] AstuciaGameManager gameManager;
+    public AstuciaGameManager gameManager;
     [SerializeField] CellScript selectedCell;
 
     void Start()
@@ -53,11 +53,6 @@ public class ShipScript : MonoBehaviour
         else if (type == ShipType.ThreeCellsShip)
         {
             Color customColor = new Color(0.2f, 0.6f, 0.4f, 1.0f);
-            StartCoroutine(Blink(obj.GetComponent<Renderer>().material, customColor));
-        }
-        else
-        {
-            Color customColor = new Color(0.2f, 0.4f, 0.6f, 0.8f);
             StartCoroutine(Blink(obj.GetComponent<Renderer>().material, customColor));
         }
     }
