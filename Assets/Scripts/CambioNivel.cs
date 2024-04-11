@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CambioNivel : MonoBehaviour
 {
     public GameObject menuPanel;
 
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("jugador")) // Modificado para comprobar si el jugador entra en contacto con la puerta
+
+        if (other.tag == "jugador") // Modificado para comprobar si el jugador entra en contacto con la puerta
         {
             menuPanel.SetActive(true); // Activa el menú
-                                       // Opcionalmente, pausa el juego si lo deseas
-                                       // Time.timeScale = 0;
+                   // Opcionalmente, pausa el juego si lo deseas
+                                                                                                // Time.timeScale = 0;
         }
     }
 
@@ -25,4 +28,7 @@ public class CambioNivel : MonoBehaviour
                                         // Time.timeScale = 1; // Reanuda el juego si lo pausaste anteriormente
         }
     }
+
+
+
 }
