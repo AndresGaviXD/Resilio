@@ -1,0 +1,370 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19045.4170; Version 2009; 64bit' Language: 'es' Physical Memory: 24501 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+61419
+Successfully changed project path to: C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
+C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 46.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/andre/OneDrive/Documentos/GitHub/Resilio/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 3GB (ID=0x1c02)
+    Vendor:   
+    VRAM:     2978 MB
+    Driver:   31.0.15.3623
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56888
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002031 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 44.87 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.202 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001226 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 49.07 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.064 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1864 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.0 MB.
+System memory in use after: 88.0 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2308.
+Total: 2.325800 ms (FindLiveObjects: 0.301300 ms CreateObjectMapping: 0.066200 ms MarkObjects: 1.816400 ms  DeleteObjects: 0.140100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/A/Font/Hana.ttf
+  artifactKey: Guid(ba458c1184541476091009c1abe64a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Font/Hana.ttf using Guid(ba458c1184541476091009c1abe64a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c10033535c9fe15ec3373457861e4f4') in 0.163164 seconds
+  Import took 0.166525 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1096.270233 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(7ab57c928228a9b4d918340d9b7ff4ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(7ab57c928228a9b4d918340d9b7ff4ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b8e6253373c98b7a1bd030fe34dee76') in 0.015127 seconds
+  Import took 0.019223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 235.931269 seconds.
+  path: Assets/Scenes/TercerTablero.unity
+  artifactKey: Guid(17785487c0dd98e40baccf2e8a3257db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TercerTablero.unity using Guid(17785487c0dd98e40baccf2e8a3257db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '587a95f2391d1d253092a4f4a4aeadc1') in 0.010170 seconds
+  Import took 0.013655 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001050 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.896 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1846 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.7 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2355.
+Total: 2.078600 ms (FindLiveObjects: 0.204300 ms CreateObjectMapping: 0.048700 ms MarkObjects: 1.714900 ms  DeleteObjects: 0.109600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.839191 seconds.
+  path: Assets/Scripts/Casilla.cs
+  artifactKey: Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Casilla.cs using Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8d934d12faca0c9db86d20397a48b29') in 0.010452 seconds
+  Import took 0.013593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.023499 seconds.
+  path: Assets/Scripts/Casilla.cs
+  artifactKey: Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Casilla.cs using Guid(0270251135de3c64887d30233fe113b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8d934d12faca0c9db86d20397a48b29') in 0.002457 seconds
+  Import took 0.005550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.370217 seconds.
+  path: Assets/Scripts/CasillaTablero.cs
+  artifactKey: Guid(5a58f00fc3cf88345adca599b59a6095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CasillaTablero.cs using Guid(5a58f00fc3cf88345adca599b59a6095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7f680d90028bfc4ccb275c4413912f0') in 0.007305 seconds
+  Import took 0.010534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.183617 seconds.
+  path: Assets/Scripts/veinteGameManager.cs
+  artifactKey: Guid(fae136cad6c538742aa51b8850ff4559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/veinteGameManager.cs using Guid(fae136cad6c538742aa51b8850ff4559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c64ff5000a2f941f8d1fe57ae24c839') in 0.007859 seconds
+  Import took 0.010934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3264.364684 seconds.
+  path: Assets/A/Images/810972.jpg
+  artifactKey: Guid(02ec09a4d4994484fb23f86d25f1e7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Images/810972.jpg using Guid(02ec09a4d4994484fb23f86d25f1e7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '454ad7cf79e681982564e0653cc6c435') in 0.123280 seconds
+  Import took 0.126717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/A/Images/x-g2dc5692f9_1280.png
+  artifactKey: Guid(4bb83f0a8651e734dbbbbae5a40d860e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Images/x-g2dc5692f9_1280.png using Guid(4bb83f0a8651e734dbbbbae5a40d860e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebaf685af47d6761a3f36c3e332a4055') in 0.044404 seconds
+  Import took 0.047558 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/A/Images/kisspng-rpg-maker-2003-rpg-maker-vx-rpg-maker-xp-sprite-5b1cc30825cad3.9207448315286115921548.png
+  artifactKey: Guid(ba1540bd8b01f764dab37991e1d02d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Images/kisspng-rpg-maker-2003-rpg-maker-vx-rpg-maker-xp-sprite-5b1cc30825cad3.9207448315286115921548.png using Guid(ba1540bd8b01f764dab37991e1d02d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2bdd37807c3df659ed6041df9f96f6a') in 0.034995 seconds
+  Import took 0.038230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/A/Images/ESSDL00014_Battleship_02.png
+  artifactKey: Guid(ea6270584c236dd45ad42b172ea860b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Images/ESSDL00014_Battleship_02.png using Guid(ea6270584c236dd45ad42b172ea860b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3ca52621141f234ad82c62ca3a4e7a1') in 0.030821 seconds
+  Import took 0.033894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/A/Images/toppng.com-alaga-ship-sprite-png-xp-pirate-rtp-style-battler-pirate-ship-sprite-sheet-320x384.png
+  artifactKey: Guid(2c7d801f0d439f2499b8d9f6c82776cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Images/toppng.com-alaga-ship-sprite-png-xp-pirate-rtp-style-battler-pirate-ship-sprite-sheet-320x384.png using Guid(2c7d801f0d439f2499b8d9f6c82776cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '332a765723e6c85e25429d9f08c869f4') in 0.083916 seconds
+  Import took 0.086749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/A/Images/fire1_64.png
+  artifactKey: Guid(bf4bf49789a547543b4e8d65d6726a4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Images/fire1_64.png using Guid(bf4bf49789a547543b4e8d65d6726a4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34d4a301a13ebf941cbf72e7ba3c0dbc') in 0.147109 seconds
+  Import took 0.150503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/A/Images/floss-move-with-sail-blue.png
+  artifactKey: Guid(85dcec07b257e0247a6e78259e88c01c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Images/floss-move-with-sail-blue.png using Guid(85dcec07b257e0247a6e78259e88c01c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a70ab744d0bced51803c2b13b7e05f9') in 0.038579 seconds
+  Import took 0.041513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/A/Images/Preview_143.png
+  artifactKey: Guid(9b456b9e400cd0a48acbfac82ebd9494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Images/Preview_143.png using Guid(9b456b9e400cd0a48acbfac82ebd9494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a46de29ab27d3927659216a56435a8b5') in 0.022380 seconds
+  Import took 0.025298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/A/Images/PngItem_3022019.png
+  artifactKey: Guid(aad219fc7d8f7254b90af8c5b0845a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Images/PngItem_3022019.png using Guid(aad219fc7d8f7254b90af8c5b0845a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3644ee3f5079442ba22dc081c289d0f2') in 0.033079 seconds
+  Import took 0.036067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/A/Images/NicePng_raven-png_316257.png
+  artifactKey: Guid(483de86ae2b18e44a997e0ffec2c46c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Images/NicePng_raven-png_316257.png using Guid(483de86ae2b18e44a997e0ffec2c46c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2366e65b5f01752a488abd081dac1c10') in 0.092980 seconds
+  Import took 0.095805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/A/Images/—Pngtree—wooden buttons for user interface_7931312.png
+  artifactKey: Guid(908a12a9ed983c6499abfc688d96a494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A/Images/—Pngtree—wooden buttons for user interface_7931312.png using Guid(908a12a9ed983c6499abfc688d96a494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9400f0231a19155394e21c8204f4a033') in 0.022160 seconds
+  Import took 0.024953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.104612 seconds.
+  path: Assets/Casillas/!!!.asset
+  artifactKey: Guid(0ca7db2fee59d134c8787a25633e39ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Casillas/!!!.asset using Guid(0ca7db2fee59d134c8787a25633e39ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '187910fe6d2d7f42e0d5bff5ddfca42d') in 0.017908 seconds
+  Import took 0.020983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/Casillas/--.-.asset
+  artifactKey: Guid(9be20807b3b9a3145b31e42169a639e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Casillas/--.-.asset using Guid(9be20807b3b9a3145b31e42169a639e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82ece333b194f2427745775e251c6a7c') in 0.013459 seconds
+  Import took 0.016835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Casillas/WAR.asset
+  artifactKey: Guid(d25880c79b304fb40a538a2352aa8691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Casillas/WAR.asset using Guid(d25880c79b304fb40a538a2352aa8691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e463615f45fc88ee522a04094a7d4a0') in 0.013589 seconds
+  Import took 0.016589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Casillas/-.asset
+  artifactKey: Guid(3d2f951ae150f9248a94d6cbf19b7304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Casillas/-.asset using Guid(3d2f951ae150f9248a94d6cbf19b7304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65a93177aceb87231d3e09c7e4690093') in 0.013884 seconds
+  Import took 0.016973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Casillas/AR.asset
+  artifactKey: Guid(4c55bed0378a52d438b5a9f20848ec59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Casillas/AR.asset using Guid(4c55bed0378a52d438b5a9f20848ec59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb59cbfbef9f701085ab826585a405e7') in 0.013700 seconds
+  Import took 0.016381 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Casillas/3.asset
+  artifactKey: Guid(66a1177316fb6eb438721b4e1cecfb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Casillas/3.asset using Guid(66a1177316fb6eb438721b4e1cecfb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbaf88cc94eea2b3535094b76c6742ca') in 0.012960 seconds
+  Import took 0.015806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Casillas/AK.asset
+  artifactKey: Guid(52d13a7223660224981a899a97114362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Casillas/AK.asset using Guid(52d13a7223660224981a899a97114362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d23eb3eaf6b9e88df9d0d75200ce677') in 0.013221 seconds
+  Import took 0.016404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Casillas/O.asset
+  artifactKey: Guid(fb9aa83e06be4c042a2afaad0e2a58e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Casillas/O.asset using Guid(fb9aa83e06be4c042a2afaad0e2a58e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e268a9260b4ddf0fb8d662720572307') in 0.014084 seconds
+  Import took 0.016895 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Casillas/Ç.asset
+  artifactKey: Guid(979d13d2f15bfbc4296040627d0866f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Casillas/Ç.asset using Guid(979d13d2f15bfbc4296040627d0866f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'def70ab47e476e2e8a0c920b60fadd7e') in 0.013550 seconds
+  Import took 0.016460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/Casillas/001.asset
+  artifactKey: Guid(d5434a935c90cce46b041e3c6db53cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Casillas/001.asset using Guid(d5434a935c90cce46b041e3c6db53cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56901b59adfafa8baa600f64bbbc198b') in 0.013521 seconds
+  Import took 0.016915 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Casillas/W.asset
+  artifactKey: Guid(0cec27db9bd28fb4e9a96798db7d6d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Casillas/W.asset using Guid(0cec27db9bd28fb4e9a96798db7d6d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be54df641ca4d40cdc4e3b637fbf75d4') in 0.013577 seconds
+  Import took 0.016424 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.727776 seconds.
+  path: Assets/SpriteSheets/tablero3_prefab
+  artifactKey: Guid(5827ff5f581815a448460eac64de6771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3_prefab using Guid(5827ff5f581815a448460eac64de6771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2c2e34a07ff129021e1abed0e44acc6') in 0.008381 seconds
+  Import took 0.011560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.046725 seconds.
+  path: Assets/SpriteSheets/tablero3_prefab/Casilla.prefab
+  artifactKey: Guid(6c3b325403010fe42a04476d8f545de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3_prefab/Casilla.prefab using Guid(6c3b325403010fe42a04476d8f545de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db9708955947a0d5b8f05bdbe5e196b3') in 0.087579 seconds
+  Import took 0.090905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.817619 seconds.
+  path: Assets/SpriteSheets/tablero3/Casilla.png
+  artifactKey: Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3/Casilla.png using Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdbf85452ccd65339c9b703fc2a63881') in 0.014602 seconds
+  Import took 0.017875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1348.417326 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bfadc895e75284e0b161c602704a0f8') in 0.066143 seconds
+  Import took 0.069653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001073 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bfadc895e75284e0b161c602704a0f8') in 0.015061 seconds
+  Import took 0.018966 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
