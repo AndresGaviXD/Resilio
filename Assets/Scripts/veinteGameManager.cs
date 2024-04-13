@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class veinteGameManager : GameManager
 {
     public CasillaTablero tablero;
     public CanvasGroup gameOver;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI hiscoreText;
 
     private void Start()
     {
