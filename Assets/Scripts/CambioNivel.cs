@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class CambioNivel : MonoBehaviour
 {
     public GameObject menuPanel;
+    public TextMeshProUGUI hiscoreText; // Asegúrate de asignar esto desde el editor con el objeto TextMeshProUGUI que muestra el Hiscore
 
+    private void Start()
+    {
+        UpdateHiscoreText(); // Actualiza el Hiscore cada vez que se inicia el nivel
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -29,6 +35,10 @@ public class CambioNivel : MonoBehaviour
         }
     }
 
-
+    void UpdateHiscoreText()
+    {
+        int hiscore = PlayerPrefs.GetInt("hiscore", 0);
+        hiscoreText.text = hiscore.ToString();
+    }
 
 }

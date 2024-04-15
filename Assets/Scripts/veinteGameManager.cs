@@ -10,6 +10,8 @@ public class veinteGameManager : GameManager
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI hiscoreText;
 
+    private int score;
+
     private void Start()
     {
         NewGame();
@@ -17,6 +19,9 @@ public class veinteGameManager : GameManager
 
     public void NewGame()
     {
+
+        SetScore(0);
+        hiscoreText.text = LoadHiscore().ToString();
         gameOver.alpha = 0f;
         gameOver.interactable = false;
 
@@ -42,7 +47,7 @@ public class veinteGameManager : GameManager
 
         while (elapsed < duration)
         {
-            canvasGroup.alpha = Mathf.Lerp(from, to, elapsed/duration);
+            canvasGroup.alpha = Mathf.Lerp(from, to, elapsed / duration);
             elapsed += Time.deltaTime;
             yield return null;
         }
@@ -50,4 +55,32 @@ public class veinteGameManager : GameManager
         canvasGroup.alpha = to;
     }
 
+    public void IncreaseScore(int points)
+    {
+        SetScore(score + points);
+    }
+
+
+    private void SetScore(int score)
+    {
+        this.score = score;
+
+        scoreText.text = score.ToString();
+        SaveHiscore();
+    }
+
+    private void SaveHiscore()
+    {
+        int hiscore = LoadHiscore();
+
+        if (score > hiscore)
+        {
+            PlayerPrefs.SetInt("hiscore", score);
+        }
+    }
+
+    private int LoadHiscore()
+    {
+        return PlayerPrefs.GetInt("hiscore", 0);
+    }
 }

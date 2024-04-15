@@ -6529,6 +6529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 402655885}
+  hiscoreText: {fileID: 0}
 --- !u!1 &675776417
 GameObject:
   m_ObjectHideFlags: 0
@@ -7972,6 +7973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 375518975}
+  hiscoreText: {fileID: 0}
 --- !u!61 &1462947317
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8946,6 +8948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 1388446339}
+  hiscoreText: {fileID: 0}
 --- !u!61 &1794321250
 BoxCollider2D:
   m_ObjectHideFlags: 0

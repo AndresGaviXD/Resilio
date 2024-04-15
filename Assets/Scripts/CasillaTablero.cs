@@ -138,6 +138,8 @@ public class CasillaTablero : MonoBehaviour
         int number = b.number * 2;
 
         b.SetEstado(casillaEstados[index], number);
+
+        gameManager.IncreaseScore(number);
     }
 
     private int IndexOf(CasillaEstado state)
