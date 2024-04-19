@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuInicial.unity
     guid: 2db6d1be40180ce42b2c78c6a019d285
   - enabled: 1
-    path: Assets/Scenes/PrimerTablero.unity
-    guid: 7120ba8fa9720304bad4019f497ff64b
-  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PrimerTablero.unity
+    guid: 7120ba8fa9720304bad4019f497ff64b
   - enabled: 1
     path: Assets/Scenes/SegundoTablero.unity
     guid: 6a5ed59ff97f94f4e90ce73cb4edd87a

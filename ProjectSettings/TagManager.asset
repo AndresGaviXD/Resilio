@@ -17,6 +17,7 @@ TagManager:
   - 3cells_ship
   - Start
   - DontDestroy
+  - Cuadrado
   layers:
   - Default
   - TransparentFX
