@@ -68,6 +68,10 @@ public class Casilla : MonoBehaviour
 
         StartCoroutine(Animate(cell.transform.position, true));
 
+        // Nuevo: Aumentar el valor máximo de la casilla
+        veinteGameManager gameManager = FindObjectOfType<veinteGameManager>();
+        gameManager.IncreaseMaxCellValue(cell.casilla.number);
+
     }
 
     private IEnumerator Animate(Vector3 to, bool merging)
