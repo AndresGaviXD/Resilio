@@ -30,10 +30,12 @@ public class ShipScript : MonoBehaviour
     [SerializeField] float yOffset;
     [SerializeField] AstuciaGameManager gameManager;
     [SerializeField] CellScript selectedCell;
+    public Vector3 originalPosition;
 
     private void Start()
     {
         gameManager = FindObjectOfType<AstuciaGameManager>();
+        originalPosition = transform.position;
     }
 
     public void ChangeColor(GameObject obj, ShipType type)
@@ -77,11 +79,12 @@ public class ShipScript : MonoBehaviour
 
     public void MoveShip(Vector3 position, ShipType type)
     {
+        //add offset if rotated ship need this
         if (isRotated)
         {
             transform.position = new Vector3(position.x + xOffsetRotated, position.y + yOffset, position.z);
         }
-        else
+        else if (!isRotated)
         {
             transform.position = new Vector3(position.x + xOffset, position.y, position.z);
         }
@@ -89,28 +92,37 @@ public class ShipScript : MonoBehaviour
         rightBondTransform = transform.Find("RightBond");
         leftBondTransform = transform.Find("LeftBond");
 
-        if (rightBondTransform.position.x >= rightBond || rightBondTransform.position.y <= downBond || leftBondTransform.position.x <= leftBond || leftBondTransform.position.y >= upBond)
+        //if ship is outside the borders
+        if (rightBondTransform.position.x >= rightBond || rightBondTransform.position.y <= downBond ||
+            leftBondTransform.position.x <= leftBond || leftBondTransform.position.y >= upBond)
         {
-            isShipPlaced = false;
-            gameManager.StartCoroutine(gameManager.Wait());
+            ReturnToDock(); // Call the method to return to the dock
         }
         else
         {
-            isShipPlaced = true;
-        }
-
-        foreach (GameObject ship in ships)
-        {
-            if (Physics2D.OverlapBox(transform.position, transform.localScale, 0f, LayerMask.GetMask("Ship")))
+            //if ships overlap
+            foreach (GameObject ship in ships)
             {
-                isShipPlaced = false;
-                gameManager.StartCoroutine(gameManager.Wait());
-                break;
+                if (Physics2D.OverlapBox(transform.position, transform.localScale, 0f, LayerMask.GetMask("Ship")))
+                {
+                    ReturnToDock(); // Call the method to return to the dock
+                    return;
+                }
             }
+
+            isShipPlaced = true;
         }
 
         Physics.SyncTransforms();
     }
+
+    private void ReturnToDock()
+    {
+        isShipPlaced = false;
+        transform.position = new Vector3(0, 0, transform.position.z); // Move the ship back to the dock
+        gameManager.StartCoroutine(gameManager.Wait());
+    }
+
 
     public ShipType CheckType(GameObject ship)
     {

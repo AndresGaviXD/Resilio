@@ -15,11 +15,11 @@ C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51292
+51469
 Successfully changed project path to: C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
 C:/Users/andre/OneDrive/Documentos/GitHub/Resilio
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 49.73 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 48.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
@@ -35,42 +35,197 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56868
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56580
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002190 seconds.
+Registered in 0.001990 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 44.48 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 50.76 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.104 seconds
+- Completed reload, in  1.099 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001216 seconds.
+Registered in 0.001193 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 46.94 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 45.87 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.028 seconds
+- Completed reload, in  1.042 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1874 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 88.3 MB.
 System memory in use after: 88.3 MB.
 
 Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2319.
-Total: 2.118500 ms (FindLiveObjects: 0.217600 ms CreateObjectMapping: 0.051800 ms MarkObjects: 1.711600 ms  DeleteObjects: 0.136300 ms)
+Total: 2.182900 ms (FindLiveObjects: 0.216600 ms CreateObjectMapping: 0.052200 ms MarkObjects: 1.775600 ms  DeleteObjects: 0.137000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/SpriteSheets/tablero3_prefab/Casilla.prefab
+  artifactKey: Guid(6c3b325403010fe42a04476d8f545de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3_prefab/Casilla.prefab using Guid(6c3b325403010fe42a04476d8f545de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a954806aefd8d8dc20e3fc2be4eee23f') in 0.127706 seconds
+  Import took 0.130855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/SpriteSheets/tablero3_prefab
+  artifactKey: Guid(5827ff5f581815a448460eac64de6771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3_prefab using Guid(5827ff5f581815a448460eac64de6771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2c2e34a07ff129021e1abed0e44acc6') in 0.007705 seconds
+  Import took 0.010808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/SpriteSheets/escenarioV2.png
+  artifactKey: Guid(9f500494536d80546bef06bc1bdce8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/escenarioV2.png using Guid(9f500494536d80546bef06bc1bdce8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bf96252b7e690f8647adfe8fc070655') in 0.101122 seconds
+  Import took 0.104089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.877016 seconds.
+  path: Assets/SpriteSheets/tablero3/Casilla.png
+  artifactKey: Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3/Casilla.png using Guid(922de972547895e4fa2f7c2db333c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56b5d1f541b26fa629cd1935e29758e8') in 0.016194 seconds
+  Import took 0.019362 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001498 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.934 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1857 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.6 MB.
+System memory in use after: 90.6 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2331.
+Total: 2.021000 ms (FindLiveObjects: 0.205700 ms CreateObjectMapping: 0.047300 ms MarkObjects: 1.660700 ms  DeleteObjects: 0.106000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 5122.487821 seconds.
+  path: Assets/Scripts/MenuPausa.cs
+  artifactKey: Guid(4254ae195ea56a94ba4ab0833b3dd9bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MenuPausa.cs using Guid(4254ae195ea56a94ba4ab0833b3dd9bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78c8311c069c04e5a4ce5e62af37b71d') in 0.019241 seconds
+  Import took 0.022469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.949135 seconds.
+  path: Assets/MenuPausa.cs
+  artifactKey: Guid(f1a8b1789317dc843ae69f34fea09996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MenuPausa.cs using Guid(f1a8b1789317dc843ae69f34fea09996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59a5057beabc0d531bc67b053afc403f') in 0.002563 seconds
+  Import took 0.005678 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001140 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.911 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1857 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.9 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2334.
+Total: 3.122000 ms (FindLiveObjects: 0.430500 ms CreateObjectMapping: 0.126600 ms MarkObjects: 2.413900 ms  DeleteObjects: 0.149200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001096 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.931 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1857 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2337.
+Total: 2.084100 ms (FindLiveObjects: 0.206800 ms CreateObjectMapping: 0.048000 ms MarkObjects: 1.707300 ms  DeleteObjects: 0.120900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 513.709207 seconds.
+  path: Assets/Scripts/MenuPausa.cs
+  artifactKey: Guid(4254ae195ea56a94ba4ab0833b3dd9bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MenuPausa.cs using Guid(4254ae195ea56a94ba4ab0833b3dd9bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fcaee831e3fe8c0f5f6b1c5d9cc4e69') in 0.006474 seconds
+  Import took 0.010453 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001160 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.982 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1857 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.3 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2340.
+Total: 2.869000 ms (FindLiveObjects: 0.399000 ms CreateObjectMapping: 0.109100 ms MarkObjects: 2.222000 ms  DeleteObjects: 0.137400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 187.098633 seconds.
+  path: Assets/SpriteSheets/tablero3
+  artifactKey: Guid(6dcf5776102b6a447b6cb18ffca3221a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteSheets/tablero3 using Guid(6dcf5776102b6a447b6cb18ffca3221a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '506f07fb2f6d0d338e16617f49556d06') in 0.012301 seconds
+  Import took 0.015801 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

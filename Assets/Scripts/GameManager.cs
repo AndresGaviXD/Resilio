@@ -386,10 +386,18 @@ public class GameManager : MonoBehaviour
     }
 
     public IEnumerator Wait()
-    {
-        textChangePosition.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        textChangePosition.gameObject.SetActive(false);
-    }
+{
+    textChangePosition.gameObject.SetActive(true);
+    
+    // Movemos el barco seleccionado de regreso a su posición original en el dock
+    selectedShip.transform.position = selectedShip.originalPosition;
+
+    // Reiniciamos la posición seleccionada para evitar problemas con futuros clics
+    chosenPosition = Vector3.zero;
+
+    yield return new WaitForSeconds(1f);
+    textChangePosition.gameObject.SetActive(false);
+}
+
     */
 }
