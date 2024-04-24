@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using System;
 using UnityEngine;
 
 public class AI : MonoBehaviour
@@ -9,11 +7,17 @@ public class AI : MonoBehaviour
     private List<Tuple<int, int>> usedIndices = new List<Tuple<int, int>>();
     private List<Tuple<int, int>> chosenIndices = new List<Tuple<int, int>>();
     private List<Tuple<int, int>> temporaryIndices = new List<Tuple<int, int>>();
-    [SerializeField] GameObject[,] enemyTiles = new GameObject[10, 10];
-    [SerializeField] GameObject cellPrefab; 
+    private GameObject[,] enemyTiles = new GameObject[10, 10];
+    [SerializeField] GameObject cellPrefab;
+
+    // Tamaño de cada celda del tablero
+    private float cellSize = 0.9f;
+    private float yOffset = -4.5f;
+    private float xOffset = -4.5f;
 
     void Start()
     {
+    
         Generate(4, 1); //generate 4 one-tile-sized ships
         Generate(3, 2); //generate 3 two-tiles-sized ships
         Generate(1, 4); //generate 1 four-tiles-sized ship
@@ -98,21 +102,27 @@ public class AI : MonoBehaviour
 
     void RenderBoard()
     {
-        float cellSize = 0.9f;
-        float yOffset = -4.5f;
-        float xOffset = -4.5f;
-
         for (int x = 0; x < 10; x++)
         {
             for (int y = 0; y < 10; y++)
             {
-                GameObject cell = Instantiate(cellPrefab, new Vector3(x*cellSize + xOffset, y*cellSize + yOffset, 0), Quaternion.identity);
+                // Calculamos las coordenadas
+                float xPos = x * cellSize + xOffset;
+                float yPos = y * cellSize + yOffset;  // Ajuste del desplazamiento en Y
+
+                // Creamos la celda en la posición calculada
+                GameObject cell = Instantiate(cellPrefab, new Vector3(xPos, yPos, 0), Quaternion.identity);
                 enemyTiles[x, y] = cell;
+
+                // Verificamos si la celda tiene un barco
                 bool hasShip = usedIndices.Contains(new Tuple<int, int>(x, y));
                 cell.GetComponent<CellScript>().hasShip = hasShip;
             }
         }
     }
+
+
+
 
     public (int x, int y) ChooseTile()
     {
@@ -129,6 +139,5 @@ public class AI : MonoBehaviour
         chosenIndices.Add(new Tuple<int, int>(x, y));
 
         return (x, y);
-
     }
 }

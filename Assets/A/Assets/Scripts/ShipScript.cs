@@ -124,6 +124,7 @@ public class ShipScript : MonoBehaviour
     }
 
 
+
     public ShipType CheckType(GameObject ship)
     {
         if (ship.CompareTag("1cell_ship"))

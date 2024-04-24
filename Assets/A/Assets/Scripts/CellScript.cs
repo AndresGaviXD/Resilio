@@ -22,7 +22,7 @@ public class CellScript : MonoBehaviour
 
         foreach (GameObject obj in ships)
         {
-            if(Physics2D.OverlapBox(transform.position, transform.localScale, 0f, LayerMask.GetMask("Ship"))) 
+            if (Physics2D.OverlapBox(transform.position, transform.localScale, 0f, LayerMask.GetMask("Ship")))
             {
                 hasShip = true;
                 break;
@@ -31,7 +31,7 @@ public class CellScript : MonoBehaviour
             {
                 hasShip = false;
             }
-           
+
         }
     }
 

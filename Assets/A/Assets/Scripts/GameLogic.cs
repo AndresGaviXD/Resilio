@@ -1,33 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
 
 public class GameLogic : MonoBehaviour
 {
     CellScript selectedCell;
     private int Turn = 1;
-    private int enemyShipsNumber = 20;
-    private int playerShipsNumber = 20;
+    private int enemyShipsNumber = 16;
+    private int playerShipsNumber = 16;
     private bool isTileChoosen = false;
     private bool enemyChoosenTile = false;
     private bool enemyTilesFound = false;
     AI ai;
-    [SerializeField] Text yourTurn;
-    [SerializeField] Text enemyTurn;
-    [SerializeField] Button youWin;
-    [SerializeField] Button youLost;
-    [SerializeField] Button backToMenu;
-    [SerializeField] GameObject fire;
-    [SerializeField] GameObject missed;
-    [SerializeField] List<GameObject> playerTiles = new List<GameObject>();
-    [SerializeField] List<GameObject> playerUI = new List<GameObject>();
-    [SerializeField] List<GameObject> enemyUI = new List<GameObject>();
-    [SerializeField] List<GameObject> enemyTiles = new List<GameObject>();
-    [SerializeField] List<GameObject> playerShips = new List<GameObject>();
+    [SerializeField] private Text yourTurn;
+    [SerializeField] private Text enemyTurn;
+    [SerializeField] private Button youWin;
+    [SerializeField] private Button youLost;
+    [SerializeField] private Button backToMenu;
+    [SerializeField] private GameObject fire;
+    [SerializeField] private GameObject missed;
+    [SerializeField] private List<GameObject> playerTiles = new List<GameObject>();
+    [SerializeField] private List<GameObject> playerUI = new List<GameObject>();
+    [SerializeField] private List<GameObject> enemyUI = new List<GameObject>();
+    [SerializeField] private List<GameObject> enemyTiles = new List<GameObject>();
+    [SerializeField] private List<GameObject> playerShips = new List<GameObject>();
     Dictionary<string, List<GameObject>> shipDictionary = new Dictionary<string, List<GameObject>>();
 
     void Start()
@@ -54,10 +52,10 @@ public class GameLogic : MonoBehaviour
         if (Turn == 1)
         {
             SetUI(true);
-   
+
             if (!isTileChoosen)
             {
-                ChooseTile();
+                // ChooseTile() se llama desde la entrada del jugador
             }
         }
 
@@ -73,17 +71,17 @@ public class GameLogic : MonoBehaviour
 
                 CheckIfHit(enemyChosenTile, enemyUI, enemyChoosenTile);
             }
-           
+
             StartCoroutine(Wait(1));
         }
 
-        if(enemyShipsNumber == 0)
+        if (enemyShipsNumber == 0)
         {
             Turn = 0;
             youWin.gameObject.SetActive(true);
             backToMenu.gameObject.SetActive(true);
         }
-        else if(playerShipsNumber == 0)
+        else if (playerShipsNumber == 0)
         {
             Turn = 0;
             youLost.gameObject.SetActive(true);
@@ -115,7 +113,6 @@ public class GameLogic : MonoBehaviour
     {
         shipDictionary.Add("1cell_ship", new List<GameObject>());
         shipDictionary.Add("2cells_ship", new List<GameObject>());
-        shipDictionary.Add("3cells_ship", new List<GameObject>());
         shipDictionary.Add("4cells_ship", new List<GameObject>());
 
         GameObject[] allShips = FindObjectsOfType<GameObject>();
@@ -136,26 +133,18 @@ public class GameLogic : MonoBehaviour
         }
     }
 
-    void ChooseTile()
+    // Nuevo método para que el jugador elija una casilla
+    public void ChooseTile(int x, int y)
     {
-        if (Input.GetMouseButtonDown(0))
+        CellScript selectedTile = GetTileAtPosition(x, y, 10);
+        if (selectedTile != null)
         {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-
-            if (hit.collider != null && hit.collider.CompareTag("EnemyCell"))
-            {
-                CellScript tile = hit.collider.GetComponent<CellScript>();
-                selectedCell = tile;
-
-                CheckIfHit(selectedCell, playerUI, isTileChoosen);
-
-                StartCoroutine(Wait(2));
-            }
-
-            else
-            {
-                isTileChoosen = false;
-            }
+            CheckIfHit(selectedTile, playerUI, isTileChoosen);
+            StartCoroutine(Wait(2));
+        }
+        else
+        {
+            isTileChoosen = false;
         }
     }
 
@@ -189,12 +178,12 @@ public class GameLogic : MonoBehaviour
             GameObject newFire = Instantiate(fire, selectedTile.transform.position, Quaternion.identity);
             list.Add(newFire);
 
-            if(Turn == 1)
+            if (Turn == 1)
             {
                 enemyShipsNumber--;
                 UnityEngine.Debug.Log(enemyShipsNumber);
             }
-            if(Turn == 2)
+            if (Turn == 2)
             {
                 playerShipsNumber--;
                 UnityEngine.Debug.Log(playerShipsNumber);
@@ -212,7 +201,4 @@ public class GameLogic : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
-
-
-
 }
