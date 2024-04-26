@@ -2,6 +2,7 @@ using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BuscaGameManager : GameManager
 {
@@ -14,6 +15,18 @@ public class BuscaGameManager : GameManager
     private int height;
     private int numMines;
 
+    /// <summary>
+    /// ////////////
+    /// </summary>
+    /// 
+    public TextMeshProUGUI scoreText;
+
+    public char currentGrade; // Cambié de char a string
+    public TMP_Text gradeText;
+
+    /// <summary>
+    /// ////////////
+    /// </summary>
 
     private readonly float tileSize = 0.5f;
 
@@ -21,6 +34,23 @@ public class BuscaGameManager : GameManager
 
     void Start()
     {
+
+        // Obtener la calificación guardada, si existe
+
+        if (PlayerPrefs.HasKey("Grade"))
+        {
+            currentGrade = PlayerPrefs.GetString("Grade")[0];
+        }
+        else
+        {
+            currentGrade = 'F'; // Si no hay ninguna calificación guardada, comenzar con F
+        }
+
+        // Muestra la calificación en el canvas al inicio del juego
+        gradeText.text = "Tu calificación: " + currentGrade;
+
+        /////
+        ///
         CreateGameBoard(16, 16, 40);
         ResetGameState();
     }
@@ -135,6 +165,19 @@ public class BuscaGameManager : GameManager
 
     public void GameOver()
     {
+
+        // Calcula el puntaje (puedes ajustar esta lógica según tus criterios)
+        int score = CalculateScore();
+
+        // Asigna la calificación según el puntaje
+        currentGrade = CalculateGrade(score);
+
+        // Guarda la calificación
+        PlayerPrefs.SetString("Grade", currentGrade.ToString()); // Cambié currentGrade.ToString() por currentGrade
+
+        // Muestra la calificación en el canvas
+        scoreText.text = "Tu calificación: " + currentGrade;
+
         foreach (Tile tile in tiles)
         {
             tile.ShowGameOverState();
@@ -208,5 +251,50 @@ public class BuscaGameManager : GameManager
         {
             ClickNeighbours(tile);
         }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+
+    private int CalculateScore()
+    {
+        int score = 0;
+        foreach (Tile tile in tiles)
+        {
+            if (!tile.active && tile.isMine)
+            {
+                score++;
+            }
+        }
+        return score;
+    }
+
+    private char CalculateGrade(int score)
+    {
+        char grade;
+        // Define tus criterios de calificación aquí
+        if (score < 10)
+        {
+            grade = 'D';
+        }
+        else if (score < 20)
+        {
+            grade = 'C';
+        }
+        else if (score < 30)
+        {
+            grade = 'B';
+        }
+        else if (score < 40)
+        {
+            grade = 'A';
+        }
+        else
+        {
+            grade = 'S';
+        }
+        return grade;
     }
 }
