@@ -18,7 +18,6 @@ public class GameLogic : MonoBehaviour
     [SerializeField] private Text enemyTurn;
     [SerializeField] private Button youWin;
     [SerializeField] private Button youLost;
-    [SerializeField] private Button backToMenu;
     [SerializeField] private GameObject fire;
     [SerializeField] private GameObject missed;
     [SerializeField] private List<GameObject> playerTiles = new List<GameObject>();
@@ -27,13 +26,21 @@ public class GameLogic : MonoBehaviour
     [SerializeField] private List<GameObject> enemyTiles = new List<GameObject>();
     [SerializeField] private List<GameObject> playerShips = new List<GameObject>();
     Dictionary<string, List<GameObject>> shipDictionary = new Dictionary<string, List<GameObject>>();
+    [SerializeField] private Text scoreText;
+    private int consecutiveHits = 0;
+    public int score;
+
+    void UpdateScore(int score)
+    {
+        string scoreLetter = GetScoreLetter(score);
+        scoreText.text = "Puntaje: " + score + ", Clasificación: " + scoreLetter;
+    }
 
     void Start()
     {
         selectedCell = null;
         youWin.gameObject.SetActive(false);
         youLost.gameObject.SetActive(false);
-        backToMenu.gameObject.SetActive(false);
         ai = GameObject.Find("EnemyManager").GetComponent<AI>();
         GameObject[] cells = GameObject.FindGameObjectsWithTag("Cell");
         playerTiles.AddRange(cells);
@@ -77,15 +84,20 @@ public class GameLogic : MonoBehaviour
 
         if (enemyShipsNumber == 0)
         {
+            // Calcular puntaje y mostrar resultado
+            CalculateScore();
             Turn = 0;
             youWin.gameObject.SetActive(true);
-            backToMenu.gameObject.SetActive(true);
+            UpdateScore(score);
         }
         else if (playerShipsNumber == 0)
         {
+            // Calcular puntaje y mostrar resultado
+            CalculateScore();
             Turn = 0;
             youLost.gameObject.SetActive(true);
-            backToMenu.gameObject.SetActive(true);
+            UpdateScore(score);
+
         }
 
     }
@@ -150,7 +162,7 @@ public class GameLogic : MonoBehaviour
 
     IEnumerator Wait(int number)
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.3f);
         Turn = number;
         isTileChoosen = false;
         enemyChoosenTile = false;
@@ -194,11 +206,49 @@ public class GameLogic : MonoBehaviour
         {
             GameObject newMissed = Instantiate(missed, selectedTile.transform.position, Quaternion.identity);
             list.Add(newMissed);
+            consecutiveHits = 0;
         }
     }
 
-    public void LoadMenu()
+    void CalculateScore()
     {
-        SceneManager.LoadScene("Menu");
+
+        // Calcular puntaje
+        if (enemyShipsNumber == 0) // Victoria
+        {
+            score += 500; // Puntuación base por victoria
+            score += 160; //barcos destruidos
+            score += consecutiveHits * 50; // Puntuación por aciertos consecutivos
+            score -= playerShipsNumber * 10;
+        }
+        else // Derrota
+        {
+
+            score += consecutiveHits * 50; // Puntuación por aciertos consecutivos
+            score += enemyShipsNumber * 10;
+            score -= playerShipsNumber * 10;
+
+        }
+
+
     }
+
+
+    string GetScoreLetter(int score)
+    {
+        if (score < 800)
+        {
+            return "Bajo";
+        }
+        else if (score >= 800 && score < 1000)
+        {
+            return "Medio";
+        }
+        else
+        {
+            return "Alto";
+        }
+    }
+
+
 }

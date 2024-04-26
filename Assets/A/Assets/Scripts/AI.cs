@@ -19,8 +19,7 @@ public class AI : MonoBehaviour
     {
     
         Generate(4, 1); //generate 4 one-tile-sized ships
-        Generate(3, 2); //generate 3 two-tiles-sized ships
-        Generate(1, 4); //generate 1 four-tiles-sized ship
+        Generate(4, 2); //generate 3 two-tiles-sized ships
 
         RenderBoard();
 
