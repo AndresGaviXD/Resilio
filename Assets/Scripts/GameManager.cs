@@ -13,210 +13,273 @@ public class GameManager : MonoBehaviour
 
     /*
     
-        [SerializeField] private Transform tilePrefab;
-        [SerializeField] private Transform gameHolder;
+       [SerializeField] private Transform tilePrefab;
+    [SerializeField] private Transform gameHolder;
+    public TextMeshProUGUI scoreText;
+    public char currentGrade = 'F';
+    public TMP_Text gradeText;
+    private List<Tile> tiles = new List<Tile>();
+    private int width;
+    private int height;
+    private int numMines;
+    private int oldscore;
+    private readonly float tileSize = 0.5f;
+    public GameObject restartPopup;
 
-        private List<Tile> tiles = new List<Tile>();
-
-        private int width;
-        private int height;
-        private int numMines;
-
-
-        private readonly float tileSize = 0.5f;
-
-        public GameObject restartPopup;
-
-        void Start()
+    void Start()
+    {
+        if (!PlayerPrefs.HasKey("HighestScore"))
         {
-            CreateGameBoard(16, 16, 40);
-            ResetGameState();
+            PlayerPrefs.SetInt("HighestScore", 0);
+            PlayerPrefs.SetString("HighestGrade", "F");
         }
 
-        public void CreateGameBoard(int width, int height, int numMines)
+        oldscore = PlayerPrefs.GetInt("HighestScore");
+        currentGrade = PlayerPrefs.GetString("HighestGrade")[0];
+
+        gradeText.text = "Tu calificación: " + currentGrade;
+
+        CreateGameBoard(16, 16, 40);
+        ResetGameState();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            this.width = width;
-            this.height = height;
-            this.numMines = numMines;
+            RestartGame();
+        }
+    }
 
+    public void CreateGameBoard(int width, int height, int numMines)
+    {
+        this.width = width;
+        this.height = height;
+        this.numMines = numMines;
 
-            for (int row = 0; row < height; row++)
+        for (int row = 0; row < height; row++)
+        {
+            for (int col = 0; col < width; col++)
             {
-                for (int col = 0; col < width; col++)
-                {
-                    Transform tileTransform = Instantiate(tilePrefab);
-                    tileTransform.parent = gameHolder;
-                    float xIndex = col - ((width - 1) / 2.0f);
-                    float yIndex = row - ((height - 1) / 2.0f);
-                    tileTransform.localPosition = new Vector2(xIndex * tileSize, yIndex * tileSize);
+                Transform tileTransform = Instantiate(tilePrefab);
+                tileTransform.parent = gameHolder;
+                float xIndex = col - ((width - 1) / 2.0f);
+                float yIndex = row - ((height - 1) / 2.0f);
+                tileTransform.localPosition = new Vector2(xIndex * tileSize, yIndex * tileSize);
 
-                    Tile tile = tileTransform.GetComponent<Tile>();
-                    tiles.Add(tile);
-                    tile.gameManager = this;
-                }
+                Tile tile = tileTransform.GetComponent<Tile>();
+                tiles.Add(tile);
+                tile.gameManager = this;
             }
         }
+    }
 
+    private void ResetGameState()
+    {
+        int[] minePositions = Enumerable.Range(0, tiles.Count).OrderBy(x => Random.Range(0.0f, 1.0f)).ToArray();
 
-        private void ResetGameState()
+        for (int i = 0; i < numMines; i++)
         {
-            int[] minePositions = Enumerable.Range(0, tiles.Count).OrderBy(x => Random.Range(0.0f, 1.0f)).ToArray();
-
-            for (int i = 0; i < numMines; i++)
-            {
-                int pos = minePositions[i];
-                tiles[pos].isMine = true;
-            }
-
-            for (int i = 0; i < tiles.Count; i++)
-            {
-                tiles[i].mineCount = HowManyMines(i);
-
-            }
+            int pos = minePositions[i];
+            tiles[pos].isMine = true;
         }
 
-        private int HowManyMines(int location)
+        for (int i = 0; i < tiles.Count; i++)
         {
-            int count = 0;
-            foreach (int pos in GetNeighbours(location))
-            {
-                if (tiles[pos].isMine)
-                {
-                    count++;
-                }
-            }
-            return count;
+            tiles[i].mineCount = HowManyMines(i);
         }
+    }
 
-        private List<int> GetNeighbours(int pos)
+    private int HowManyMines(int location)
+    {
+        int count = 0;
+        foreach (int pos in GetNeighbours(location))
         {
-            List<int> neighbours = new List<int>();
-            int row = pos / width;
-            int col = pos % width;
-
-            if (row < (height - 1))
+            if (tiles[pos].isMine)
             {
-
-                neighbours.Add(pos + width);
-                if (col > 0)
-                {
-                    neighbours.Add(pos + width - 1);
-                }
-                if (col < (width - 1))
-                {
-                    neighbours.Add(pos + width + 1);
-                }
+                count++;
             }
+        }
+        return count;
+    }
+
+    private List<int> GetNeighbours(int pos)
+    {
+        List<int> neighbours = new List<int>();
+        int row = pos / width;
+        int col = pos % width;
+
+        if (row < (height - 1))
+        {
+            neighbours.Add(pos + width);
             if (col > 0)
             {
-                neighbours.Add(pos - 1);
+                neighbours.Add(pos + width - 1);
             }
             if (col < (width - 1))
             {
-                neighbours.Add(pos + 1);
+                neighbours.Add(pos + width + 1);
             }
-            if (row > 0)
-            {
-                neighbours.Add(pos - width);
-                if (col > 0)
-                {
-                    neighbours.Add(pos - width - 1);
-                }
-                if (col < (width - 1))
-                {
-                    neighbours.Add(pos - width + 1);
-                }
-            }
-
-
-            return neighbours;
         }
-
-        public void ClickNeighbours(Tile tile)
+        if (col > 0)
         {
-            int location = tiles.IndexOf(tile);
-            foreach (int pos in GetNeighbours(location))
+            neighbours.Add(pos - 1);
+        }
+        if (col < (width - 1))
+        {
+            neighbours.Add(pos + 1);
+        }
+        if (row > 0)
+        {
+            neighbours.Add(pos - width);
+            if (col > 0)
             {
-                tiles[pos].ClickedTile();
+                neighbours.Add(pos - width - 1);
+            }
+            if (col < (width - 1))
+            {
+                neighbours.Add(pos - width + 1);
             }
         }
 
-        public void GameOver()
+        return neighbours;
+    }
+
+    public void ClickNeighbours(Tile tile)
+    {
+        int location = tiles.IndexOf(tile);
+        foreach (int pos in GetNeighbours(location))
         {
+            tiles[pos].ClickedTile();
+        }
+    }
+
+    public void GameOver()
+    {
+        int newScore = CalculateScore();
+        char newGrade = CalculateGrade(newScore);
+
+        if (newScore > oldscore)
+        {
+            PlayerPrefs.SetInt("HighestScore", newScore);
+            PlayerPrefs.SetString("HighestGrade", newGrade.ToString());
+
+            oldscore = newScore;
+            currentGrade = newGrade;
+        }
+
+        if (newScore > oldscore)
+        {
+            scoreText.text = "Tu calificación: " + currentGrade + "\nTu puntaje: " + newGrade + "\nPuntaje más alto: " + oldscore;
+        }
+        else
+        {
+            scoreText.text = "Tu calificación: " + newGrade + "\nTu puntaje: " + newScore + "\nPuntaje más alto: " + oldscore;
+        }
+
+        foreach (Tile tile in tiles)
+        {
+            tile.ShowGameOverState();
+        }
+        restartPopup.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        ClearBoard();
+        CreateGameBoard(width, height, numMines);
+        ResetGameState();
+        restartPopup.SetActive(false);
+        scoreText.text = "Tu calificación: " + currentGrade + "\nTu puntaje más alto: " + oldscore;
+        newScore = 0;
+    }
+
+    private void ClearBoard()
+    {
+        foreach (Transform child in gameHolder)
+        {
+            Destroy(child.gameObject);
+        }
+        tiles.Clear();
+    }
+
+    public void CheckGameOver()
+    {
+        int count = 0;
+        foreach (Tile tile in tiles)
+        {
+            if (tile.active)
+            {
+                count++;
+            }
+        }
+        if (count == numMines)
+        {
+            Debug.Log("Has desactivado todas las minas");
             foreach (Tile tile in tiles)
             {
-                tile.ShowGameOverState();
+                tile.active = false;
+                tile.SetFlaggedIfMine();
             }
-            restartPopup.SetActive(true);
         }
+    }
 
-        void Update()
+    public void ExpandIfFlagged(Tile tile)
+    {
+        int location = tiles.IndexOf(tile);
+        int flag_count = 0;
+        foreach (int pos in GetNeighbours(location))
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (tiles[pos].flagged)
             {
-                RestartGame();
+                flag_count++;
             }
         }
 
-        public void RestartGame()
+        if (flag_count == tile.mineCount)
         {
-            ClearBoard();
-            // Reinicia el juego recreando el tablero y reseteando el estado del juego
-            CreateGameBoard(width, height, numMines);
-            ResetGameState();
-            restartPopup.SetActive(false);
+            ClickNeighbours(tile);
         }
+    }
 
-        private void ClearBoard()
+    private int CalculateScore()
+    {
+        int score = 0;
+        foreach (Tile tile in tiles)
         {
-            // Destruir todas las casillas existentes
-            foreach (Transform child in gameHolder)
+            if (tile.flagged == true && tile.isMine == true)
             {
-                Destroy(child.gameObject);
+                score++;
             }
-
-            // Limpiar la lista de casillas
-            tiles.Clear();
         }
+        return score;
+    }
 
-        public void CheckGameOver()
+    private char CalculateGrade(int score)
+    {
+        char grade;
+        if (score < 10)
         {
-            int count = 0;
-            foreach (Tile tile in tiles)
-            {
-                if (tile.active)
-                {
-                    count++;
-                }
-            }
-            if (count == numMines)
-            {
-                Debug.Log("Has desactivado todas las minas");
-                foreach (Tile tile in tiles)
-                {
-                    tile.active = false;
-                    tile.SetFlaggedIfMine();
-                }
-            }
+            grade = 'D';
         }
-
-        public void ExpandIfFlagged(Tile tile)
+        else if (score < 20)
         {
-            int location = tiles.IndexOf(tile);
-            int flag_count = 0;
-            foreach (int pos in GetNeighbours(location))
-            {
-                if (tiles[pos].flagged)
-                {
-                    flag_count++;
-                }
-            }
-
-            if (flag_count == tile.mineCount)
-            {
-                ClickNeighbours(tile);
-            }
+            grade = 'C';
         }
+        else if (score < 30)
+        {
+            grade = 'B';
+        }
+        else if (score < 40)
+        {
+            grade = 'A';
+        }
+        else
+        {
+            grade = 'S';
+        }
+        return grade;
+    }
 
     */
 
