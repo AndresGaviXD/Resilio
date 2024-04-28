@@ -7930,7 +7930,7 @@ CapsuleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.019863605, y: 0.0061118975}
   m_Size: {x: 0.12276912, y: 0.1777762}
-  m_Direction: 0
+  m_Direction: 1
 --- !u!114 &882734196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9138,7 +9138,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ultimo puntaje mas alto
+  m_text: "En este minijuego, deberas acomodar tu artiller\xEDa de forma estrategica
+    en los cuadros y tras esto, procederas a una batalla contra la IA donde usando
+    un sistema de coordenadas deber\xE1s acabar con sus unidades antes de que la
+    IA acabe contigo.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -9165,8 +9168,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
