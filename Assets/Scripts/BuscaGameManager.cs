@@ -8,41 +8,51 @@ public class BuscaGameManager : GameManager
 {
     [SerializeField] private Transform tilePrefab;
     [SerializeField] private Transform gameHolder;
-    public TextMeshProUGUI scoreText;
-    public char currentGrade = 'F';
-    public TMP_Text gradeText;
+
     private List<Tile> tiles = new List<Tile>();
+
     private int width;
     private int height;
     private int numMines;
-    private int oldscore;
+
+    /// <summary>
+    /// ////////////
+    /// </summary>
+    /// 
+    public TextMeshProUGUI scoreText;
+
+    public char currentGrade; // Cambié de char a string
+    public TMP_Text gradeText;
+
+    /// <summary>
+    /// ////////////
+    /// </summary>
+
     private readonly float tileSize = 0.5f;
+
     public GameObject restartPopup;
-    int newScore = 0;
 
     void Start()
     {
-        if (!PlayerPrefs.HasKey("HighestScore"))
+
+        // Obtener la calificación guardada, si existe
+
+        if (PlayerPrefs.HasKey("Grade"))
         {
-            PlayerPrefs.SetInt("HighestScore", 0);
-            PlayerPrefs.SetString("HighestGrade", "F");
+            currentGrade = PlayerPrefs.GetString("Grade")[0];
+        }
+        else
+        {
+            currentGrade = 'F'; // Si no hay ninguna calificación guardada, comenzar con F
         }
 
-        oldscore = PlayerPrefs.GetInt("HighestScore");
-        currentGrade = PlayerPrefs.GetString("HighestGrade")[0];
-
+        // Muestra la calificación en el canvas al inicio del juego
         gradeText.text = "Tu calificación: " + currentGrade;
 
+        /////
+        ///
         CreateGameBoard(16, 16, 40);
         ResetGameState();
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            RestartGame();
-        }
     }
 
     public void CreateGameBoard(int width, int height, int numMines)
@@ -50,6 +60,7 @@ public class BuscaGameManager : GameManager
         this.width = width;
         this.height = height;
         this.numMines = numMines;
+
 
         for (int row = 0; row < height; row++)
         {
@@ -68,6 +79,7 @@ public class BuscaGameManager : GameManager
         }
     }
 
+
     private void ResetGameState()
     {
         int[] minePositions = Enumerable.Range(0, tiles.Count).OrderBy(x => Random.Range(0.0f, 1.0f)).ToArray();
@@ -81,6 +93,7 @@ public class BuscaGameManager : GameManager
         for (int i = 0; i < tiles.Count; i++)
         {
             tiles[i].mineCount = HowManyMines(i);
+
         }
     }
 
@@ -105,6 +118,7 @@ public class BuscaGameManager : GameManager
 
         if (row < (height - 1))
         {
+
             neighbours.Add(pos + width);
             if (col > 0)
             {
@@ -136,6 +150,7 @@ public class BuscaGameManager : GameManager
             }
         }
 
+
         return neighbours;
     }
 
@@ -150,26 +165,18 @@ public class BuscaGameManager : GameManager
 
     public void GameOver()
     {
-        int newScore = CalculateScore();
-        char newGrade = CalculateGrade(newScore);
 
-        if (newScore > oldscore)
-        {
-            PlayerPrefs.SetInt("HighestScore", newScore);
-            PlayerPrefs.SetString("HighestGrade", newGrade.ToString());
+        // Calcula el puntaje (puedes ajustar esta lógica según tus criterios)
+        int score = CalculateScore();
 
-            oldscore = newScore;
-            currentGrade = newGrade;
-        }
+        // Asigna la calificación según el puntaje
+        currentGrade = CalculateGrade(score);
 
-        if (newScore > oldscore)
-        {
-            scoreText.text = "Tu calificación: " + currentGrade + "\nTu puntaje: " + newGrade + "\nPuntaje más alto: " + oldscore;
-        }
-        else
-        {
-            scoreText.text = "Tu calificación: " + newGrade + "\nTu puntaje: " + newScore + "\nPuntaje más alto: " + oldscore;
-        }
+        // Guarda la calificación
+        PlayerPrefs.SetString("Grade", currentGrade.ToString()); // Cambié currentGrade.ToString() por currentGrade
+
+        // Muestra la calificación en el canvas
+        scoreText.text = "Tu calificación: " + currentGrade;
 
         foreach (Tile tile in tiles)
         {
@@ -178,22 +185,32 @@ public class BuscaGameManager : GameManager
         restartPopup.SetActive(true);
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartGame();
+        }
+    }
+
     public void RestartGame()
     {
         ClearBoard();
+        // Reinicia el juego recreando el tablero y reseteando el estado del juego
         CreateGameBoard(width, height, numMines);
         ResetGameState();
         restartPopup.SetActive(false);
-        scoreText.text = "Tu calificación: " + currentGrade + "\nTu puntaje más alto: " + oldscore;
-        newScore = 0;
     }
 
     private void ClearBoard()
     {
+        // Destruir todas las casillas existentes
         foreach (Transform child in gameHolder)
         {
             Destroy(child.gameObject);
         }
+
+        // Limpiar la lista de casillas
         tiles.Clear();
     }
 
@@ -236,12 +253,17 @@ public class BuscaGameManager : GameManager
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+
     private int CalculateScore()
     {
         int score = 0;
         foreach (Tile tile in tiles)
         {
-            if (tile.flagged == true && tile.isMine == true)
+            if (!tile.active && tile.isMine)
             {
                 score++;
             }
@@ -252,6 +274,7 @@ public class BuscaGameManager : GameManager
     private char CalculateGrade(int score)
     {
         char grade;
+        // Define tus criterios de calificación aquí
         if (score < 10)
         {
             grade = 'D';
