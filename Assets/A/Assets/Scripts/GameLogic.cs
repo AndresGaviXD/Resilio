@@ -30,6 +30,7 @@ public class GameLogic : MonoBehaviour
     private int consecutiveHits = 0;
     public int score;
 
+
     void UpdateScore(int score)
     {
         string scoreLetter = GetScoreLetter(score);
@@ -162,13 +163,13 @@ public class GameLogic : MonoBehaviour
 
     IEnumerator Wait(int number)
     {
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(1.2f);
         Turn = number;
         isTileChoosen = false;
         enemyChoosenTile = false;
     }
 
-    CellScript GetTileAtPosition(int x, int y, int width)
+    public CellScript GetTileAtPosition(int x, int y, int width)
     {
         int index = x + y * width;
         if (index >= 0 && index < playerTiles.Count)
@@ -249,6 +250,5 @@ public class GameLogic : MonoBehaviour
             return "Alto";
         }
     }
-
 
 }
