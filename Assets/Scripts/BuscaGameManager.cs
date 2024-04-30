@@ -250,7 +250,7 @@ public class BuscaGameManager : GameManager
                 banderaserradas++;
             }
         }
-        if (banderaserradas > 6)
+        if (banderaserradas > 3)
         {
             
          
