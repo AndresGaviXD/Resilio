@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     /*
     
-       [SerializeField] private Transform tilePrefab;
+     [SerializeField] private Transform tilePrefab;
     [SerializeField] private Transform gameHolder;
     public TextMeshProUGUI scoreText;
     public char currentGrade = 'F';
@@ -23,19 +23,20 @@ public class GameManager : MonoBehaviour
     private int height;
     private int numMines;
     private int oldscore;
+    private int score = 0;
     private readonly float tileSize = 0.5f;
     public GameObject restartPopup;
 
     void Start()
     {
-        if (!PlayerPrefs.HasKey("HighestScore"))
-        {
-            PlayerPrefs.SetInt("HighestScore", 0);
-            PlayerPrefs.SetString("HighestGrade", "F");
-        }
+        oldscore = PlayerPrefs.GetInt("HighestScore", 0);
+        currentGrade = PlayerPrefs.GetString("HighestGrade", "F")[0];
 
-        oldscore = PlayerPrefs.GetInt("HighestScore");
-        currentGrade = PlayerPrefs.GetString("HighestGrade")[0];
+        // Si la puntuación más alta guardada es diferente de 0, calculamos su letra correspondiente
+        if (oldscore != 0)
+        {
+            currentGrade = CalculateGrade(oldscore);
+        }
 
         gradeText.text = "Tu calificación: " + currentGrade;
 
@@ -43,13 +44,54 @@ public class GameManager : MonoBehaviour
         ResetGameState();
     }
 
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
             RestartGame();
         }
+        Desactivar();
     }
+
+    public void Desactivar()
+    {
+        int banderaserradas = 0;
+        foreach (Tile tile in tiles)
+        {
+            if (tile.isMine == false && tile.flagged == true)
+            {
+                banderaserradas++;
+            }
+        }
+        if (banderaserradas > 6)
+        {
+            
+         
+            foreach (Tile tile in tiles)
+            {
+                if (!tile.flagged && !tile.active)
+                {
+                    tile.spriteRenderer.enabled = false;
+                }
+            }
+            
+            
+        }
+        if (banderaserradas <= 6)
+        {
+            foreach (Tile tile in tiles)
+            {
+                if (tile.flagged == false && (!tile.active || tile.active))
+                {
+                    banderaserradas--;
+                    tile.spriteRenderer.enabled = true;
+                }
+            }
+        }
+
+    }
+
 
     public void CreateGameBoard(int width, int height, int numMines)
     {
@@ -156,27 +198,26 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        int newScore = CalculateScore();
-        char newGrade = CalculateGrade(newScore);
+        CalculateScore();
+        char scoreGrade = CalculateGrade(score); // Calcula la letra correspondiente a la puntuación actual
+        char highScoreGrade = CalculateGrade(oldscore); // Calcula la letra correspondiente a la máxima puntuación guardada
 
-        if (newScore > oldscore)
+        // Actualiza la máxima puntuación si la puntuación actual supera a la máxima puntuación guardada
+        if (score > oldscore)
         {
-            PlayerPrefs.SetInt("HighestScore", newScore);
-            PlayerPrefs.SetString("HighestGrade", newGrade.ToString());
-
-            oldscore = newScore;
-            currentGrade = newGrade;
+            oldscore = score;
+            PlayerPrefs.SetInt("HighestScore", oldscore);
+            PlayerPrefs.SetString("HighestGrade", scoreGrade.ToString());
         }
 
-        if (newScore > oldscore)
-        {
-            scoreText.text = "Tu calificación: " + currentGrade + "\nTu puntaje: " + newGrade + "\nPuntaje más alto: " + oldscore;
-        }
-        else
-        {
-            scoreText.text = "Tu calificación: " + newGrade + "\nTu puntaje: " + newScore + "\nPuntaje más alto: " + oldscore;
-        }
+        // Construye el texto para mostrar la puntuación y letra alcanzada antes del game over y la máxima puntuación guardada
+        string gameOverText = "Tu calificación: " + scoreGrade + "\nPuntuación: " + score;
+        string highScoreText = "\n\nMáxima puntuación: " + oldscore + "\nCalificación máxima: " + highScoreGrade;
 
+        // Actualiza el texto mostrando la información de forma separada
+        scoreText.text = gameOverText + highScoreText;
+
+        // Muestra el game over y muestra el panel de reinicio
         foreach (Tile tile in tiles)
         {
             tile.ShowGameOverState();
@@ -184,14 +225,15 @@ public class GameManager : MonoBehaviour
         restartPopup.SetActive(true);
     }
 
+
+
     public void RestartGame()
     {
         ClearBoard();
         CreateGameBoard(width, height, numMines);
         ResetGameState();
         restartPopup.SetActive(false);
-        scoreText.text = "Tu calificación: " + currentGrade + "\nTu puntaje más alto: " + oldscore;
-        newScore = 0;
+        score = 0;
     }
 
     private void ClearBoard()
@@ -240,14 +282,15 @@ public class GameManager : MonoBehaviour
         {
             ClickNeighbours(tile);
         }
+        
     }
 
     private int CalculateScore()
     {
-        int score = 0;
+        score = 0;
         foreach (Tile tile in tiles)
         {
-            if (tile.flagged == true && tile.isMine == true)
+            if (tile.isMine == true && tile.flagged == true)
             {
                 score++;
             }
@@ -258,19 +301,19 @@ public class GameManager : MonoBehaviour
     private char CalculateGrade(int score)
     {
         char grade;
-        if (score < 10)
+        if (score >= 0 && score < 10)
         {
             grade = 'D';
         }
-        else if (score < 20)
+        else if (score >= 10 && score < 20)
         {
             grade = 'C';
         }
-        else if (score < 30)
+        else if (score >= 20 && score < 30)
         {
             grade = 'B';
         }
-        else if (score < 40)
+        else if (score >= 30 && score < 40)
         {
             grade = 'A';
         }

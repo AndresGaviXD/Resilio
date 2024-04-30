@@ -18,7 +18,7 @@ public class Tile : MonoBehaviour
     public BuscaGameManager gameManager;
 
 
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     public bool flagged = false;
     public bool active = true;
     public bool isMine = false;
@@ -102,6 +102,8 @@ public class Tile : MonoBehaviour
 
         }
     }
+
+
 
     public void SetFlaggedIfMine()
     {
