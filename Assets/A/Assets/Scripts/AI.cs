@@ -17,7 +17,7 @@ public class AI : MonoBehaviour
 
     void Start()
     {
-    
+
         Generate(4, 1); //generate 4 one-tile-sized ships
         Generate(4, 2); //generate 3 two-tiles-sized ships
 
@@ -31,32 +31,26 @@ public class AI : MonoBehaviour
         {
             int x;
             int y;
-
             do
             {
                 x = UnityEngine.Random.Range(0, 10);
                 y = UnityEngine.Random.Range(0, 10);
 
             } while (usedIndices.Contains(new Tuple<int, int>(x, y)));
-
             usedIndices.Add(new Tuple<int, int>(x, y));
-
             temporaryIndices.Clear();
-
             if (shipSize > 1)
             {
                 int direction;
                 int nextX;
                 int nextY;
                 bool isValidPosition;
-
                 do
                 {
                     direction = UnityEngine.Random.Range(0, 4); //generate random direction (0 - up, 1 - down, 2 - left, 3 - right)
                     nextX = x;
                     nextY = y;
                     isValidPosition = true;
-
                     for (int j = 0; j < shipSize - 1; j++)
                     {
                         if (direction == 0 && nextY < 9) //up
@@ -81,23 +75,20 @@ public class AI : MonoBehaviour
                             isValidPosition = false;
                             break;
                         }
-
                         if (usedIndices.Contains(new Tuple<int, int>(nextX, nextY)))
                         {
                             temporaryIndices.Clear();
                             isValidPosition = false;
                             break;
                         }
-
                         temporaryIndices.Add(new Tuple<int, int>(nextX, nextY));
-
                     }
                 } while (!isValidPosition);
             }
-
             usedIndices.AddRange(temporaryIndices);
         }
     }
+
 
     void RenderBoard()
     {
@@ -132,11 +123,23 @@ public class AI : MonoBehaviour
         {
             x = UnityEngine.Random.Range(0, 10);
             y = UnityEngine.Random.Range(0, 10);
-
-        } while (chosenIndices.Contains(new Tuple<int, int>(x, y)));
+        } while (IsPositionChosen(x, y));
 
         chosenIndices.Add(new Tuple<int, int>(x, y));
 
         return (x, y);
     }
+
+    private bool IsPositionChosen(int x, int y)
+    {
+        foreach (var tuple in chosenIndices)
+        {
+            if (tuple.Item1 == x && tuple.Item2 == y)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

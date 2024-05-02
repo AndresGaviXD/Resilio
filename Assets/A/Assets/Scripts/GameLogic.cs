@@ -1,41 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameLogic : MonoBehaviour
 {
     CellScript selectedCell;
     private int Turn = 1;
-    private int enemyShipsNumber = 16;
-    private int playerShipsNumber = 16;
+    private int enemyShipsNumber = 12;
+    private int playerShipsNumber = 12;
     private bool isTileChoosen = false;
     private bool enemyChoosenTile = false;
     private bool enemyTilesFound = false;
     AI ai;
-    [SerializeField] private Text yourTurn;
-    [SerializeField] private Text enemyTurn;
-    [SerializeField] private Button youWin;
-    [SerializeField] private Button youLost;
-    [SerializeField] private GameObject fire;
-    [SerializeField] private GameObject missed;
-    [SerializeField] private List<GameObject> playerTiles = new List<GameObject>();
-    [SerializeField] private List<GameObject> playerUI = new List<GameObject>();
-    [SerializeField] private List<GameObject> enemyUI = new List<GameObject>();
-    [SerializeField] private List<GameObject> enemyTiles = new List<GameObject>();
-    [SerializeField] private List<GameObject> playerShips = new List<GameObject>();
+    [SerializeField] Text yourTurn;
+    [SerializeField] Text enemyTurn;
+    [SerializeField] Button youWin;
+    [SerializeField] Button youLost;
+    [SerializeField] GameObject fire;
+    [SerializeField] GameObject missed;
+    [SerializeField] List<GameObject> playerTiles = new List<GameObject>();
+    [SerializeField] List<GameObject> playerUI = new List<GameObject>();
+    [SerializeField] List<GameObject> enemyUI = new List<GameObject>();
+    [SerializeField] List<GameObject> enemyTiles = new List<GameObject>();
+    [SerializeField] List<GameObject> playerShips = new List<GameObject>();
     Dictionary<string, List<GameObject>> shipDictionary = new Dictionary<string, List<GameObject>>();
-    [SerializeField] private Text scoreText;
+    int score = 0;
     private int consecutiveHits = 0;
-    public int score;
-
-
-    void UpdateScore(int score)
-    {
-        string scoreLetter = GetScoreLetter(score);
-        scoreText.text = "Puntaje: " + score + ", Clasificación: " + scoreLetter;
-    }
+    private int acumuladoshits = 0;
+    int barcosenemigosderribados = 0;
+    int oldscore;
+    public char currentGrade = 'D';
+    public TMP_Text gradeText;
+    public TextMeshProUGUI scoreText;
 
     void Start()
     {
@@ -46,6 +44,10 @@ public class GameLogic : MonoBehaviour
         GameObject[] cells = GameObject.FindGameObjectsWithTag("Cell");
         playerTiles.AddRange(cells);
         ShipFinding();
+
+        // Cargar puntaje máximo y grado máximo guardados
+        oldscore = PlayerPrefs.GetInt("PuntuacionMaxima", 0);
+        currentGrade = PlayerPrefs.GetString("Letra", "D")[0];
     }
 
     void Update()
@@ -63,7 +65,7 @@ public class GameLogic : MonoBehaviour
 
             if (!isTileChoosen)
             {
-                // ChooseTile() se llama desde la entrada del jugador
+                ChooseTile();
             }
         }
 
@@ -85,20 +87,25 @@ public class GameLogic : MonoBehaviour
 
         if (enemyShipsNumber == 0)
         {
-            // Calcular puntaje y mostrar resultado
-            CalculateScore();
             Turn = 0;
             youWin.gameObject.SetActive(true);
-            UpdateScore(score);
+            SetActive(enemyUI, false);
+            SetActive(playerUI, false);
+            SetActive(enemyTiles, false);
+            SetActive(playerTiles, false);
+            SetActive(playerShips, false);
+            Acabar();
         }
         else if (playerShipsNumber == 0)
         {
-            // Calcular puntaje y mostrar resultado
-            CalculateScore();
             Turn = 0;
             youLost.gameObject.SetActive(true);
-            UpdateScore(score);
-
+            SetActive(enemyUI, false);
+            SetActive(playerUI, false);
+            SetActive (enemyTiles, false);
+            SetActive(playerTiles, false);
+            SetActive(playerShips, false);
+            Acabar();
         }
 
     }
@@ -109,6 +116,28 @@ public class GameLogic : MonoBehaviour
         {
             gameObject.SetActive(active);
         }
+    }
+
+    private void Acabar()
+    {
+        CalcularScore();
+        char scoreGrade = CalcularMargen(score); // Calcula la letra correspondiente a la puntuación actual
+        char highScoreGrade = CalcularMargen(oldscore); // Calcula la letra correspondiente a la máxima puntuación guardada
+
+        // Actualiza la máxima puntuación si la puntuación actual supera a la máxima puntuación guardada
+        if (score > oldscore)
+        {
+            oldscore = score;
+            PlayerPrefs.SetInt("PuntuacionMaxima", oldscore);
+            PlayerPrefs.SetString("Letra", scoreGrade.ToString());
+        }
+
+        // Construye el texto para mostrar la puntuación y letra alcanzada antes del game over y la máxima puntuación guardada
+        string gameOverText = "Tu calificación: " + scoreGrade + "\nPuntuación: " + score;
+        string highScoreText = "\n\nMáxima puntuación: " + oldscore + "\nCalificación máxima: " + highScoreGrade;
+
+        // Actualiza el texto mostrando la información de forma separada
+        scoreText.text = gameOverText + highScoreText;
     }
 
     void SetUI(bool active)
@@ -146,30 +175,50 @@ public class GameLogic : MonoBehaviour
         }
     }
 
-    // Nuevo método para que el jugador elija una casilla
-    public void ChooseTile(int x, int y)
+    List<CellScript> attackedTiles = new List<CellScript>();
+
+    void ChooseTile()
     {
-        CellScript selectedTile = GetTileAtPosition(x, y, 10);
-        if (selectedTile != null)
+        if (Input.GetMouseButtonDown(0))
         {
-            CheckIfHit(selectedTile, playerUI, isTileChoosen);
-            StartCoroutine(Wait(2));
-        }
-        else
-        {
-            isTileChoosen = false;
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+            if (hit.collider != null && hit.collider.CompareTag("EnemyCell"))
+            {
+                CellScript tile = hit.collider.GetComponent<CellScript>();
+
+                // Verificar si la casilla ya ha sido atacada
+                if (attackedTiles.Contains(tile))
+                {
+                    // Casilla ya atacada, no hacer nada
+                    return;
+                }
+                else
+                {
+                    // Agregar la casilla al arreglo de casillas atacadas
+                    attackedTiles.Add(tile);
+
+                    // Realizar el ataque
+                    CheckIfHit(tile, playerUI, isTileChoosen);
+                    StartCoroutine(Wait(2));
+                }
+            }
+            else
+            {
+                isTileChoosen = false;
+            }
         }
     }
 
     IEnumerator Wait(int number)
     {
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(1.5f);
         Turn = number;
         isTileChoosen = false;
         enemyChoosenTile = false;
     }
 
-    public CellScript GetTileAtPosition(int x, int y, int width)
+    CellScript GetTileAtPosition(int x, int y, int width)
     {
         int index = x + y * width;
         if (index >= 0 && index < playerTiles.Count)
@@ -186,7 +235,7 @@ public class GameLogic : MonoBehaviour
     {
         chosenTile = true;
 
-        if (selectedTile.ReturnAvailability() == true)
+        if (selectedTile.ReturnAvailability())
         {
             GameObject newFire = Instantiate(fire, selectedTile.transform.position, Quaternion.identity);
             list.Add(newFire);
@@ -194,61 +243,71 @@ public class GameLogic : MonoBehaviour
             if (Turn == 1)
             {
                 enemyShipsNumber--;
-                UnityEngine.Debug.Log(enemyShipsNumber);
+                barcosenemigosderribados++;
+                consecutiveHits++;
             }
             if (Turn == 2)
             {
                 playerShipsNumber--;
-                UnityEngine.Debug.Log(playerShipsNumber);
             }
         }
-
         else
         {
             GameObject newMissed = Instantiate(missed, selectedTile.transform.position, Quaternion.identity);
             list.Add(newMissed);
+            if (consecutiveHits > 1) { 
+                acumuladoshits =+ consecutiveHits;
+            
+            }
             consecutiveHits = 0;
         }
     }
 
-    void CalculateScore()
+    private int CalcularScore()
     {
-
-        // Calcular puntaje
-        if (enemyShipsNumber == 0) // Victoria
+        score = 0;
+        if (enemyShipsNumber == 0)
         {
-            score += 500; // Puntuación base por victoria
-            score += 160; //barcos destruidos
-            score += consecutiveHits * 50; // Puntuación por aciertos consecutivos
-            score -= playerShipsNumber * 10;
-        }
-        else // Derrota
-        {
-
-            score += consecutiveHits * 50; // Puntuación por aciertos consecutivos
-            score += enemyShipsNumber * 10;
-            score -= playerShipsNumber * 10;
-
-        }
-
-
-    }
-
-
-    string GetScoreLetter(int score)
-    {
-        if (score < 800)
-        {
-            return "Bajo";
-        }
-        else if (score >= 800 && score < 1000)
-        {
-            return "Medio";
+            // Añadir puntaje por victoria y por impactos consecutivos
+            score += (8 + acumuladoshits + barcosenemigosderribados);
         }
         else
         {
-            return "Alto";
+            // Añadir puntaje por derrota y por impactos consecutivos
+            score += acumuladoshits + barcosenemigosderribados;
         }
+        return score;
+
     }
 
+
+    private char CalcularMargen(int score)
+    {
+        char grade;
+        if (score >= 0 && score < 6)
+        {
+            grade = 'E';
+        }
+        else if (score >= 6 && score < 12)
+        {
+            grade = 'D';
+        }
+        else if (score >= 12 && score < 18)
+        {
+            grade = 'C';
+        }
+        else if (score >= 18 && score < 24)
+        {
+            grade = 'B';
+        }
+        else if (score >= 24 && score < 28)
+        {
+            grade = 'A';
+        }
+        else
+        {
+            grade = 'S';
+        }
+        return grade;
+    }
 }

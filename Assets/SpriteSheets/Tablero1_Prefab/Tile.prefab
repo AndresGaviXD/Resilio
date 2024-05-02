@@ -126,17 +126,20 @@ MonoBehaviour:
   flaggedTile: {fileID: 21300000, guid: 9b3a284abb7e8844897f56b84d85c037, type: 3}
   clickedTiles:
   - {fileID: 21300000, guid: 89dbe763cd9df9240a743732f3baa077, type: 3}
-  - {fileID: 21300000, guid: 0bfa018683c1f6b438889b6ed369fe60, type: 3}
-  - {fileID: 21300000, guid: c44ce8063cd31514eb8290550569867c, type: 3}
-  - {fileID: 21300000, guid: e15922a1e0fe8774d8dc2be30dc8e363, type: 3}
-  - {fileID: 21300000, guid: 5edaa9f0b14da2040ad36df161172c8e, type: 3}
-  - {fileID: 21300000, guid: 10301c5f2458c9b48b60de6cab24a8dd, type: 3}
-  - {fileID: 21300000, guid: 3b634029326cedf438cd45b0759c2eb4, type: 3}
-  - {fileID: 21300000, guid: 42c9a8c3cd6b50649aab08d405978218, type: 3}
-  - {fileID: 21300000, guid: 1140dbc018fbb6a47ae667f594a9c9cb, type: 3}
+  - {fileID: 21300000, guid: 28cc90ac69ca523448749082c17a46d7, type: 3}
+  - {fileID: 21300000, guid: 89bc7326a80e0e14d87d281a43350adf, type: 3}
+  - {fileID: 21300000, guid: 713631ded2b08a047987831d55dfbb51, type: 3}
+  - {fileID: 21300000, guid: c5a073f14aee8554ab56ad761a871723, type: 3}
+  - {fileID: 21300000, guid: 2652a91973d42c14598d18f89e3db152, type: 3}
+  - {fileID: 21300000, guid: b50ec20da1015414da35cd7ad91fa4e5, type: 3}
+  - {fileID: 21300000, guid: ddc2cd1e710f7e64dbc84e357997aaa0, type: 3}
+  - {fileID: 21300000, guid: 864d2dbc5ed31da4fbf38c569a41f5d2, type: 3}
   mineTile: {fileID: 21300000, guid: 0702b3a95f819f141a4a6a79ddc8e25e, type: 3}
   mineWrongTile: {fileID: 21300000, guid: 2ccf91c0bb5a60c4bb3a5b880bcd9bba, type: 3}
   mineHitTile: {fileID: 21300000, guid: 00411d0fca3e7b045964528814aa8d3d, type: 3}
+  gameManager: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  flagged: 0
   active: 1
   isMine: 0
   mineCount: 0
