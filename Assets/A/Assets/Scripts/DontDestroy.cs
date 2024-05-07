@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestroy : MonoBehaviour
 {
@@ -15,6 +14,16 @@ public class DontDestroy : MonoBehaviour
         else
         {
             DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        // Verificar si se ha cargado la escena "SampleScene"
+        if (SceneManager.GetActiveScene().name == "SampleScene")
+        {
+            // Destruir este objeto
+            Destroy(gameObject);
         }
     }
 }
